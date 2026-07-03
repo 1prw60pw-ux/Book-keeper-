@@ -41,13 +41,25 @@ the top of the styles control the whole site.
 
 ## How to put it online — free, in about 2 minutes
 
-**Option A — Netlify Drop (easiest):**
+**Option A — Vercel (recommended; this repo is ready for it):**
+1. Go to https://vercel.com and sign up free with your GitHub account.
+2. Click **Add New → Project** and pick this repository.
+3. Change nothing — no framework, no build command — and click **Deploy**.
+4. Your site is live at `https://<project-name>.vercel.app` in about
+   30 seconds, and it automatically redeploys every time the site files
+   change on GitHub. Add a custom domain later under
+   **Project → Settings → Domains**.
+
+   (The `vercel.json` file in this folder is already set up — it adds
+   security headers and tidy URLs. You never need to touch it.)
+
+**Option B — Netlify Drop (no account needed to try):**
 1. Go to https://app.netlify.com/drop
 2. Drag the folder containing `index.html` onto the page.
 3. That's it — you get a live link immediately. Create a free account to keep
    it and to set a custom name (or connect a domain you buy later).
 
-**Option B — GitHub Pages (already half done, since this repo exists):**
+**Option C — GitHub Pages (already half done, since this repo exists):**
 1. On this repository's GitHub page, go to **Settings → Pages**.
 2. Under "Build and deployment", choose **Deploy from a branch**, pick your
    main branch and the `/ (root)` folder, and save.

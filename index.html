@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ============================================================
+     PATRICIA WOODS BOOKKEEPING — SINGLE-FILE WEBSITE
+     ============================================================
+     HELLO PATRICIA! This whole website lives in this one file.
+     You can edit any text by finding it below and retyping it.
+
+     QUICK MAP (use Ctrl+F / Cmd+F to jump):
+       • Your email address ......... search for  1prw60.pw@gmail.com
+       • Your name / logo ........... search for  SITE NAME
+       • Hero (big top headline) .... search for  HERO SECTION
+       • About you .................. search for  ABOUT SECTION
+       • Services ................... search for  SERVICES SECTION
+       • Why choose me .............. search for  WHY SECTION
+       • How it works ............... search for  PROCESS SECTION
+       • Testimonials ............... search for  TESTIMONIALS SECTION
+       • Contact form ............... search for  CONTACT SECTION
+       • Footer ..................... search for  FOOTER SECTION
+       • Colors ..................... search for  COLOR PALETTE
+       • Your headshot photo ........ search for  HEADSHOT PLACEHOLDER
+
+     Anything written like [EDIT: ...] is waiting for your real
+     detail — replace the whole bracket, including the brackets.
+     ============================================================ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patricia Woods Bookkeeping — Clean Books, Clear Mind</title>
+<meta name="description" content="Personal, patient bookkeeping for small businesses. Monthly bookkeeping, reconciliation, payroll support, tax-season prep, QuickBooks, and catch-up cleanups — handled with care by Patricia Woods.">
+
+<!-- Favicon: a small "PW" monogram drawn in code (no image file needed) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d3a2f'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' fill='%23c89a55' text-anchor='middle'%3EPW%3C/text%3E%3C/svg%3E">
+
+<!-- Fonts: Fraunces (headlines) + Inter (body). Loaded from Google Fonts. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   COLOR PALETTE — change these six values to re-skin the site
+   ============================================================ */
+:root{
+  --pine-950:#12241d;      /* darkest green (footer, deep panels)   */
+  --pine-900:#1d3a2f;      /* primary deep forest green             */
+  --pine-800:#27493b;      /* lighter green (hovers, gradients)     */
+  --gold-600:#a97e3c;      /* deep gold (small text on cream)       */
+  --gold-500:#c89a55;      /* main gold accent                      */
+  --gold-200:#ead9b4;      /* pale gold (lines on dark green)       */
+
+  --cream:#faf5ec;         /* page background                       */
+  --paper:#fffdf7;         /* card background                       */
+  --ink:#22322b;           /* main text color                       */
+  --muted:#5c6b63;         /* softer secondary text                 */
+  --line:#e6ddc9;          /* hairline borders                      */
+
+  --radius:18px;
+  --shadow-soft:0 1px 2px rgba(29,58,47,.05), 0 10px 30px -12px rgba(29,58,47,.18);
+  --shadow-lift:0 2px 4px rgba(29,58,47,.06), 0 22px 44px -16px rgba(29,58,47,.28);
+  --ease:cubic-bezier(.22,.61,.25,1);
+}
+
+/* ---------- Base ---------- */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  font-size:1.0625rem;line-height:1.7;
+  color:var(--ink);background:var(--cream);
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.15;color:var(--pine-900);letter-spacing:-.01em}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:var(--gold-200);color:var(--pine-950)}
+
+:focus-visible{outline:3px solid var(--gold-500);outline-offset:3px;border-radius:4px}
+
+.skip-link{
+  position:absolute;left:1rem;top:-4rem;z-index:200;
+  background:var(--pine-900);color:var(--cream);
+  padding:.6rem 1.1rem;border-radius:10px;text-decoration:none;font-weight:600;
+  transition:top .2s var(--ease);
+}
+.skip-link:focus{top:1rem}
+
+.wrap{max-width:1120px;margin-inline:auto;padding-inline:clamp(1.25rem,4.5vw,2.5rem)}
+section{padding-block:clamp(4.25rem,9vw,7.5rem)}
+
+/* Small-caps label above each section title */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.6rem;
+  font-size:.75rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold-600);margin-bottom:1rem;
+}
+.eyebrow::before{content:"";width:2rem;height:1px;background:var(--gold-500)}
+.on-dark .eyebrow{color:var(--gold-500)}
+.on-dark .eyebrow::before{background:var(--gold-500)}
+
+.section-title{font-size:clamp(1.9rem,3.6vw,2.75rem);max-width:22ch}
+.section-intro{max-width:56ch;color:var(--muted);margin-top:1rem}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:.55rem;
+  font-family:'Inter',sans-serif;font-weight:600;font-size:.97rem;
+  padding:.85rem 1.5rem;border-radius:12px;border:1px solid transparent;
+  text-decoration:none;cursor:pointer;
+  transition:transform .18s var(--ease), box-shadow .18s var(--ease), background .18s var(--ease), color .18s var(--ease);
+}
+.btn svg{width:1.05em;height:1.05em;transition:transform .18s var(--ease)}
+.btn:hover svg{transform:translateX(3px)}
+.btn-primary{background:var(--pine-900);color:var(--cream);box-shadow:var(--shadow-soft)}
+.btn-primary:hover{background:var(--pine-800);transform:translateY(-2px);box-shadow:var(--shadow-lift)}
+.btn-gold{background:var(--gold-500);color:var(--pine-950)}
+.btn-gold:hover{background:#d3a763;transform:translateY(-2px);box-shadow:var(--shadow-lift)}
+.btn-ghost{background:transparent;color:var(--pine-900);border-color:var(--pine-900)}
+.btn-ghost:hover{background:var(--pine-900);color:var(--cream);transform:translateY(-2px)}
+.btn-ghost-light{background:transparent;color:var(--cream);border-color:var(--gold-200)}
+.btn-ghost-light:hover{background:var(--cream);color:var(--pine-900)}
+
+/* ============================================================
+   NAVIGATION BAR
+   ============================================================ */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(250,245,236,.88);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid transparent;
+  transition:border-color .25s var(--ease), box-shadow .25s var(--ease);
+}
+.site-header.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px -18px rgba(29,58,47,.35)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:80px}
+
+.brand{display:inline-flex;align-items:center;gap:.8rem;text-decoration:none}
+.brand-mark{
+  width:44px;height:44px;flex:none;border-radius:12px;
+  background:var(--pine-900);
+  display:grid;place-items:center;
+  font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;color:var(--gold-500);
+  letter-spacing:.02em;
+}
+.brand-text{line-height:1.2}
+.brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--pine-900);display:block}
+.brand-tag{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-600)}
+
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a:not(.btn){
+  text-decoration:none;font-weight:500;font-size:.95rem;color:var(--ink);
+  position:relative;padding-block:.35rem;
+}
+.nav-links a:not(.btn)::after{
+  content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;
+  background:var(--gold-500);transform:scaleX(0);transform-origin:left;
+  transition:transform .22s var(--ease);
+}
+.nav-links a:not(.btn):hover::after{transform:scaleX(1)}
+.nav-links .btn{padding:.65rem 1.2rem}
+
+/* Hamburger (mobile only) */
+.nav-toggle{
+  display:none;background:none;border:0;cursor:pointer;padding:.6rem;
+  border-radius:10px;
+}
+.nav-toggle-bars{position:relative;width:24px;height:16px;display:block}
+.nav-toggle-bars span{
+  position:absolute;left:0;width:100%;height:2px;border-radius:2px;
+  background:var(--pine-900);transition:transform .25s var(--ease), opacity .2s, top .25s var(--ease);
+}
+.nav-toggle-bars span:nth-child(1){top:0}
+.nav-toggle-bars span:nth-child(2){top:7px}
+.nav-toggle-bars span:nth-child(3){top:14px}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bars span:nth-child(1){top:7px;transform:rotate(45deg)}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bars span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bars span:nth-child(3){top:7px;transform:rotate(-45deg)}
+
+@media (max-width:980px){
+  .nav-toggle{display:block}
+  .nav-links{
+    position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;align-items:stretch;gap:0;
+    background:var(--paper);border-bottom:1px solid var(--line);
+    box-shadow:0 24px 40px -20px rgba(29,58,47,.25);
+    padding:.75rem 1.25rem 1.25rem;
+    display:none;
+  }
+  .nav-links.open{display:flex}
+  .nav-links li{border-bottom:1px solid var(--line)}
+  .nav-links li:last-child{border-bottom:0;padding-top:1rem}
+  .nav-links a:not(.btn){display:block;padding:.9rem .25rem;font-size:1.05rem}
+  .nav-links .btn{width:100%;justify-content:center}
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;overflow:hidden;
+  padding-block:clamp(4rem,8vw,7rem) clamp(4.5rem,9vw,8rem);
+}
+/* soft gold glow behind the headline — decorative only */
+.hero::before{
+  content:"";position:absolute;inset:auto auto -30% -15%;
+  width:70%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle, rgba(200,154,85,.14), transparent 65%);
+  pointer-events:none;
+}
+.hero::after{
+  content:"";position:absolute;top:-25%;right:-12%;
+  width:55%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle, rgba(29,58,47,.07), transparent 65%);
+  pointer-events:none;
+}
+.hero-grid{
+  position:relative;display:grid;grid-template-columns:1.15fr .85fr;
+  gap:clamp(2.5rem,6vw,5rem);align-items:center;
+}
+.hero h1{font-size:clamp(2.4rem,5.2vw,3.9rem);font-weight:500}
+.hero h1 em{font-style:italic;color:var(--gold-600)}
+.hero-sub{margin-top:1.4rem;max-width:52ch;color:var(--muted);font-size:1.125rem}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.2rem}
+.hero-trust{
+  display:flex;align-items:center;gap:.7rem;margin-top:2.2rem;
+  font-size:.92rem;color:var(--muted);
+}
+.hero-trust svg{width:20px;height:20px;flex:none;color:var(--gold-600)}
+
+/* The decorative "ledger card" — a little reconciled ledger drawn in code.
+   Purely visual; swap for a photo later if you prefer. */
+.ledger-card{
+  position:relative;
+  background:var(--paper);border:1px solid var(--line);border-radius:22px;
+  box-shadow:var(--shadow-lift);
+  padding:1.75rem 1.75rem 1.5rem;
+  transform:rotate(1.5deg);
+}
+.ledger-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-bottom:1rem;border-bottom:1px solid var(--line);margin-bottom:.4rem;
+}
+.ledger-head h3{font-size:1.05rem;font-weight:600}
+.ledger-badge{
+  font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--pine-900);background:var(--gold-200);
+  padding:.3rem .65rem;border-radius:999px;
+}
+.ledger-row{
+  display:flex;align-items:center;gap:.8rem;
+  padding:.8rem 0;border-bottom:1px dashed var(--line);
+  font-size:.93rem;
+}
+.ledger-row:last-of-type{border-bottom:0}
+.ledger-row .tick{
+  width:22px;height:22px;flex:none;border-radius:50%;
+  background:var(--pine-900);color:var(--gold-500);
+  display:grid;place-items:center;
+}
+.ledger-row .tick svg{width:12px;height:12px}
+.ledger-row .label{flex:1;color:var(--ink)}
+.ledger-row .amount{font-variant-numeric:tabular-nums;color:var(--muted);font-size:.88rem}
+.ledger-foot{
+  margin-top:1.1rem;padding-top:1rem;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;align-items:baseline;
+}
+.ledger-foot .word{font-family:'Fraunces',serif;font-style:italic;color:var(--gold-600)}
+.ledger-foot .zero{font-variant-numeric:tabular-nums;font-weight:600;color:var(--pine-900)}
+/* small floating note pinned to the card */
+.ledger-note{
+  position:absolute;bottom:-3rem;left:-1.6rem;
+  background:var(--pine-900);color:var(--cream);
+  font-size:.85rem;line-height:1.45;
+  padding:.85rem 1.1rem;border-radius:14px;
+  box-shadow:var(--shadow-lift);
+  transform:rotate(-2.5deg);max-width:230px;
+}
+.ledger-note strong{color:var(--gold-500);font-weight:600}
+
+@media (max-width:840px){
+  .hero-grid{grid-template-columns:1fr}
+  .ledger-card{transform:rotate(0);max-width:440px;margin-top:.5rem}
+  .ledger-note{left:auto;right:-.4rem}
+}
+
+/* Thin strip listing specialties under the hero */
+.ticker{
+  border-block:1px solid var(--line);
+  background:var(--paper);
+  padding-block:1.1rem;
+}
+.ticker ul{
+  list-style:none;display:flex;flex-wrap:wrap;justify-content:center;
+  gap:.4rem 2.5rem;
+  font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--muted);
+}
+.ticker li{display:flex;align-items:center;gap:2.5rem}
+.ticker li + li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold-500)}
+@media (max-width:840px){
+  .ticker ul{gap:.4rem 1.4rem}
+  .ticker li{gap:1.4rem}
+}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about-grid{
+  display:grid;grid-template-columns:.9fr 1.1fr;
+  gap:clamp(2.5rem,6vw,5.5rem);align-items:center;
+}
+/* Monogram portrait — replace with a real headshot later (see HTML comment) */
+.portrait{
+  position:relative;aspect-ratio:4/4.6;max-width:400px;
+  border-radius:24px;overflow:hidden;
+  background:
+    radial-gradient(120% 90% at 20% 10%, rgba(200,154,85,.35), transparent 55%),
+    linear-gradient(160deg, var(--pine-800), var(--pine-950));
+  box-shadow:var(--shadow-lift);
+  display:grid;place-items:center;
+}
+.portrait-inner{
+  width:58%;aspect-ratio:1;border-radius:50%;
+  border:1px solid rgba(234,217,180,.45);
+  display:grid;place-items:center;
+}
+.portrait-inner span{
+  font-family:'Fraunces',serif;font-size:clamp(3rem,7vw,4.5rem);
+  color:var(--gold-500);font-weight:500;letter-spacing:.04em;
+}
+.portrait-caption{
+  position:absolute;bottom:1.1rem;left:50%;transform:translateX(-50%);
+  white-space:nowrap;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold-200);
+}
+.about-copy p + p{margin-top:1.1rem}
+.about-copy p{color:var(--muted)}
+.about-copy p strong{color:var(--ink);font-weight:600}
+.about-quote{
+  margin-top:1.75rem;padding-left:1.25rem;border-left:3px solid var(--gold-500);
+  font-family:'Fraunces',serif;font-style:italic;font-size:1.25rem;line-height:1.5;
+  color:var(--pine-900);
+}
+.about-quote cite{
+  display:block;margin-top:.5rem;font-family:'Inter',sans-serif;font-style:normal;
+  font-size:.85rem;color:var(--muted);
+}
+.about-facts{
+  margin-top:2rem;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;list-style:none;
+}
+.about-facts li{
+  display:flex;gap:.7rem;align-items:flex-start;
+  font-size:.95rem;color:var(--ink);
+}
+.about-facts svg{width:20px;height:20px;flex:none;color:var(--gold-600);margin-top:.15rem}
+@media (max-width:840px){
+  .about-grid{grid-template-columns:1fr}
+  .portrait{max-width:340px}
+  .about-facts{grid-template-columns:1fr}
+}
+
+/* ============================================================
+   SERVICES
+   ============================================================ */
+.services{background:var(--paper);border-block:1px solid var(--line)}
+.services-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;
+  margin-top:3rem;
+}
+.service-card{
+  background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.9rem 1.7rem;
+  transition:transform .22s var(--ease), box-shadow .22s var(--ease), border-color .22s var(--ease);
+}
+.service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lift);border-color:var(--gold-500)}
+.service-icon{
+  width:52px;height:52px;border-radius:14px;
+  background:var(--pine-900);color:var(--gold-500);
+  display:grid;place-items:center;margin-bottom:1.25rem;
+}
+.service-icon svg{width:26px;height:26px}
+.service-card h3{font-size:1.22rem;margin-bottom:.6rem}
+.service-card p{font-size:.95rem;color:var(--muted)}
+/* the final card is an invitation, styled differently */
+.service-card.card-cta{
+  background:var(--pine-900);border-color:var(--pine-900);
+  display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:1rem;
+}
+.service-card.card-cta h3{color:var(--cream)}
+.service-card.card-cta p{color:var(--gold-200)}
+@media (max-width:960px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.services-grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   WHY CHOOSE ME (dark panel)
+   ============================================================ */
+.why{background:linear-gradient(170deg,var(--pine-900),var(--pine-950));color:var(--cream)}
+.why .section-title{color:var(--cream)}
+.why .section-intro{color:var(--gold-200)}
+.why-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:3.25rem;
+}
+.why-card{
+  border:1px solid rgba(234,217,180,.22);border-radius:var(--radius);
+  padding:1.8rem 1.5rem;
+  background:rgba(255,253,247,.03);
+  transition:background .22s var(--ease), transform .22s var(--ease), border-color .22s var(--ease);
+}
+.why-card:hover{background:rgba(255,253,247,.07);transform:translateY(-4px);border-color:var(--gold-500)}
+.why-card svg{width:30px;height:30px;color:var(--gold-500);margin-bottom:1.1rem}
+.why-card h3{color:var(--cream);font-size:1.15rem;margin-bottom:.55rem}
+.why-card p{font-size:.92rem;color:var(--gold-200);line-height:1.65}
+@media (max-width:960px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.why-grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   HOW IT WORKS
+   ============================================================ */
+.steps{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3.25rem;
+  counter-reset:step;
+}
+.step{
+  position:relative;background:var(--paper);border:1px solid var(--line);
+  border-radius:var(--radius);padding:2.4rem 1.7rem 1.9rem;
+  transition:transform .22s var(--ease), box-shadow .22s var(--ease);
+}
+.step:hover{transform:translateY(-4px);box-shadow:var(--shadow-soft)}
+.step-num{
+  font-family:'Fraunces',serif;font-size:3.4rem;line-height:1;
+  color:transparent;-webkit-text-stroke:1px var(--gold-500);
+  position:absolute;top:1.2rem;right:1.4rem;font-style:italic;
+}
+.step h3{font-size:1.2rem;margin-bottom:.6rem;max-width:12ch}
+.step p{font-size:.95rem;color:var(--muted)}
+.step-arrow{
+  display:inline-flex;margin-top:1.3rem;color:var(--gold-600);
+}
+.step-arrow svg{width:26px;height:26px}
+@media (max-width:840px){.steps{grid-template-columns:1fr}}
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+.testimonials{background:var(--paper);border-block:1px solid var(--line)}
+.sample-note{
+  display:inline-flex;align-items:center;gap:.5rem;
+  margin-top:1.1rem;padding:.45rem .9rem;border-radius:999px;
+  background:var(--gold-200);color:var(--pine-950);
+  font-size:.8rem;font-weight:600;
+}
+.sample-note svg{width:15px;height:15px}
+.quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.75rem}
+.quote-card{
+  background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);
+  padding:2rem 1.7rem;display:flex;flex-direction:column;
+  transition:transform .22s var(--ease), box-shadow .22s var(--ease);
+}
+.quote-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-soft)}
+.quote-mark{width:34px;height:34px;color:var(--gold-500);margin-bottom:1rem}
+.quote-card blockquote{
+  font-family:'Fraunces',serif;font-size:1.08rem;line-height:1.6;color:var(--ink);
+  flex:1;
+}
+.quote-who{display:flex;align-items:center;gap:.85rem;margin-top:1.6rem}
+.quote-avatar{
+  width:42px;height:42px;flex:none;border-radius:50%;
+  background:var(--pine-900);color:var(--gold-500);
+  display:grid;place-items:center;
+  font-family:'Fraunces',serif;font-size:.95rem;
+}
+.quote-who .name{font-weight:600;font-size:.93rem;line-height:1.3}
+.quote-who .role{font-size:.82rem;color:var(--muted)}
+@media (max-width:960px){.quote-grid{grid-template-columns:1fr;max-width:560px}}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-grid{
+  display:grid;grid-template-columns:.85fr 1.15fr;
+  gap:clamp(2.5rem,6vw,4.5rem);margin-top:3rem;align-items:start;
+}
+.contact-info p{color:var(--muted);max-width:44ch}
+.contact-email{
+  display:inline-flex;align-items:center;gap:.7rem;
+  margin-top:1.75rem;padding:1rem 1.3rem;border-radius:14px;
+  background:var(--paper);border:1px solid var(--line);
+  text-decoration:none;font-weight:600;color:var(--pine-900);
+  transition:border-color .2s var(--ease), box-shadow .2s var(--ease), transform .2s var(--ease);
+  word-break:break-all;
+}
+.contact-email:hover{border-color:var(--gold-500);box-shadow:var(--shadow-soft);transform:translateY(-2px)}
+.contact-email svg{width:20px;height:20px;flex:none;color:var(--gold-600)}
+.contact-expect{list-style:none;margin-top:2.25rem;display:grid;gap:1rem}
+.contact-expect li{display:flex;gap:.75rem;font-size:.95rem;color:var(--ink)}
+.contact-expect svg{width:20px;height:20px;flex:none;color:var(--gold-600);margin-top:.2rem}
+
+.contact-form{
+  background:var(--paper);border:1px solid var(--line);border-radius:22px;
+  box-shadow:var(--shadow-soft);padding:clamp(1.6rem,4vw,2.5rem);
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
+.field{margin-bottom:1.1rem}
+.field label{
+  display:block;font-size:.85rem;font-weight:600;color:var(--pine-900);
+  margin-bottom:.45rem;letter-spacing:.02em;
+}
+.field label .opt{font-weight:400;color:var(--muted)}
+.field input,.field select,.field textarea{
+  width:100%;font:inherit;font-size:.97rem;color:var(--ink);
+  background:var(--cream);border:1px solid var(--line);border-radius:11px;
+  padding:.8rem .95rem;
+  transition:border-color .18s var(--ease), box-shadow .18s var(--ease);
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--gold-500);
+  box-shadow:0 0 0 3px rgba(200,154,85,.22);
+}
+.field textarea{resize:vertical;min-height:130px}
+.field select{appearance:none;-webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%235c6b63' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right .9rem center;
+  padding-right:2.5rem;
+}
+.form-note{font-size:.85rem;color:var(--muted);margin-top:1rem;display:flex;gap:.55rem;align-items:flex-start}
+.form-note svg{width:17px;height:17px;flex:none;color:var(--gold-600);margin-top:.2rem}
+@media (max-width:900px){.contact-grid{grid-template-columns:1fr}}
+@media (max-width:560px){.form-row{grid-template-columns:1fr}}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer{
+  background:var(--pine-950);color:var(--gold-200);
+  padding-block:3.25rem 2.5rem;
+}
+.footer-top{
+  display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;
+  gap:1.5rem;padding-bottom:2rem;margin-bottom:2rem;
+  border-bottom:1px solid rgba(234,217,180,.18);
+}
+.site-footer .brand-name{color:var(--cream)}
+.site-footer .brand-tag{color:var(--gold-500)}
+.footer-links{display:flex;flex-wrap:wrap;gap:1.5rem;list-style:none}
+.footer-links a{
+  text-decoration:none;font-size:.92rem;color:var(--gold-200);
+  transition:color .18s var(--ease);
+}
+.footer-links a:hover{color:var(--cream)}
+.footer-bottom{
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:.8rem;
+  font-size:.85rem;color:rgba(234,217,180,.7);
+}
+.footer-bottom a{color:var(--gold-500);text-decoration:none}
+.footer-bottom a:hover{text-decoration:underline}
+
+/* ============================================================
+   BELLS & WHISTLES
+   Scroll progress line, FAQ accordion, back-to-top button,
+   copy-email button, animated hero ledger, active nav states.
+   ============================================================ */
+
+/* Thin gold progress line under the sticky header */
+.scroll-progress{
+  position:absolute;left:0;bottom:-1px;height:2px;width:100%;
+  background:linear-gradient(90deg,var(--gold-500),var(--gold-600));
+  transform:scaleX(0);transform-origin:left;
+}
+
+/* Nav link for the section currently on screen */
+.nav-links a:not(.btn).active{color:var(--pine-900)}
+.nav-links a:not(.btn).active::after{transform:scaleX(1)}
+
+/* Hero ledger: rows start dim, then "reconcile" one by one (JS adds
+   .animate on load and .done per row as the card scrolls into view) */
+.ledger-card .tick{transition:transform .4s cubic-bezier(.34,1.56,.64,1), opacity .3s var(--ease)}
+.ledger-card .ledger-row,.ledger-card .ledger-foot,.ledger-card .ledger-badge{transition:opacity .5s var(--ease)}
+.ledger-card.animate .ledger-row{opacity:.28}
+.ledger-card.animate .ledger-row .tick{transform:scale(.55);opacity:.35}
+.ledger-card.animate .ledger-badge{opacity:.25}
+.ledger-card.animate .ledger-row.done{opacity:1}
+.ledger-card.animate .ledger-row.done .tick{transform:scale(1);opacity:1}
+.ledger-card.animate.balanced .ledger-badge{opacity:1}
+@keyframes float-note{0%,100%{transform:rotate(-2.5deg) translateY(0)}50%{transform:rotate(-1.8deg) translateY(-7px)}}
+.ledger-note{animation:float-note 6s ease-in-out infinite}
+
+/* FAQ accordion (uses native <details> so it works without JS) */
+.faq-list{max-width:840px;margin-top:2.75rem;display:grid;gap:1rem}
+.faq-item{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  transition:border-color .22s var(--ease), box-shadow .22s var(--ease);
+}
+.faq-item:hover{border-color:var(--gold-500)}
+.faq-item[open]{border-color:var(--gold-500);box-shadow:var(--shadow-soft)}
+.faq-item summary{
+  list-style:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;gap:1.25rem;
+  padding:1.3rem 1.5rem;
+  font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:1.13rem;color:var(--pine-900);
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-chevron{
+  width:34px;height:34px;flex:none;border-radius:50%;
+  border:1px solid var(--line);color:var(--gold-600);
+  display:grid;place-items:center;
+  transition:transform .28s var(--ease), background .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease);
+}
+.faq-chevron svg{width:15px;height:15px}
+.faq-item[open] .faq-chevron{
+  transform:rotate(45deg);
+  background:var(--pine-900);color:var(--gold-500);border-color:var(--pine-900);
+}
+.faq-body{padding:0 1.5rem 1.5rem;color:var(--muted);font-size:.97rem;max-width:64ch}
+.faq-body a{color:var(--gold-600);font-weight:600}
+
+/* Floating back-to-top button */
+.to-top{
+  position:fixed;right:1.4rem;bottom:1.4rem;z-index:90;
+  width:50px;height:50px;border-radius:50%;
+  border:1px solid rgba(234,217,180,.4);
+  background:var(--pine-900);color:var(--gold-500);
+  display:grid;place-items:center;cursor:pointer;
+  box-shadow:var(--shadow-lift);
+  opacity:0;transform:translateY(14px);pointer-events:none;
+  transition:opacity .3s var(--ease), transform .3s var(--ease), background .2s var(--ease);
+}
+.to-top.show{opacity:1;transform:none;pointer-events:auto}
+.to-top:hover{background:var(--pine-800)}
+.to-top svg{width:20px;height:20px}
+
+/* "Copy email" chip beside the address */
+.email-row{display:flex;align-items:center;flex-wrap:wrap;gap:.7rem;margin-top:1.75rem}
+.email-row .contact-email{margin-top:0}
+.copy-btn{
+  font:inherit;font-size:.85rem;font-weight:600;
+  display:inline-flex;align-items:center;gap:.45rem;
+  padding:.65rem 1rem;border-radius:11px;
+  border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;
+  transition:border-color .2s var(--ease), color .2s var(--ease), background .2s var(--ease);
+}
+.copy-btn:hover{border-color:var(--gold-500);color:var(--pine-900)}
+.copy-btn.copied{background:var(--pine-900);color:var(--gold-200);border-color:var(--pine-900)}
+.copy-btn svg{width:15px;height:15px}
+
+/* ============================================================
+   FADE-IN-ON-SCROLL ANIMATION
+   Elements with class "reveal" gently rise into view once.
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease), transform .7s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}
+.reveal.d2{transition-delay:.16s}
+.reveal.d3{transition-delay:.24s}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ============================================================
+     NAVIGATION — SITE NAME lives here (and again in the footer)
+     ============================================================ -->
+<header class="site-header" id="top">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Patricia Woods Bookkeeping — back to top">
+        <!-- LOGO PLACEHOLDER: to use a real logo image, replace the
+             div below with:  <img src="logo.png" alt="Patricia Woods Bookkeeping logo" style="width:44px;border-radius:12px;">  -->
+        <div class="brand-mark" aria-hidden="true">PW</div>
+        <span class="brand-text">
+          <span class="brand-name">Patricia Woods</span>
+          <span class="brand-tag">Bookkeeping</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Me</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li><a href="#testimonials">Kind Words</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li>
+          <a class="btn btn-gold" href="#contact">Get Started
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- thin gold line that fills as the visitor scrolls -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+
+<!-- ============================================================
+     HERO SECTION — the big first impression
+     ============================================================ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <p class="eyebrow">Bookkeeping for small businesses</p>
+      <h1 id="hero-title">Clean books. Clear numbers. <em>One less thing</em> on your plate.</h1>
+      <p class="hero-sub">You started your business to do the work you love — not to spend
+      Sunday nights untangling receipts. I keep your books accurate, current, and
+      tax-ready, and I explain everything in plain English. No jargon, no rushing,
+      no judgment about how far behind you are.</p>
+
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#contact">Book a free consultation
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#services">See what I handle</a>
+      </div>
+
+      <p class="hero-trust">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.4-3 8.4-7 10-4-1.6-7-5.6-7-10V6l7-3z"/><path d="M9 12l2 2 4-4.5"/></svg>
+        Personal, one-on-one service — you always work directly with Patricia.
+      </p>
+    </div>
+
+    <!-- Decorative reconciled-ledger card (drawn in code, no images) -->
+    <div class="reveal d1" aria-hidden="true">
+      <div class="ledger-card" id="ledger-card">
+        <div class="ledger-head">
+          <h3>Monthly Close</h3>
+          <span class="ledger-badge">Reconciled</span>
+        </div>
+        <div class="ledger-row">
+          <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>
+          <span class="label">Bank accounts matched</span>
+          <span class="amount">to the penny</span>
+        </div>
+        <div class="ledger-row">
+          <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>
+          <span class="label">Expenses categorized</span>
+          <span class="amount">every one</span>
+        </div>
+        <div class="ledger-row">
+          <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>
+          <span class="label">Invoices &amp; bills up to date</span>
+          <span class="amount">on time</span>
+        </div>
+        <div class="ledger-row">
+          <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>
+          <span class="label">Reports ready to read</span>
+          <span class="amount">plain English</span>
+        </div>
+        <div class="ledger-foot">
+          <span class="word">Everything balances.</span>
+          <span class="zero" id="ledger-zero">Off by $0.00</span>
+        </div>
+        <div class="ledger-note"><strong>That feeling</strong> when your books are done, checked, and off your mind — that's what I deliver.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Thin specialty strip -->
+<div class="ticker" aria-label="Specialties">
+  <div class="wrap">
+    <ul>
+      <li>Monthly Bookkeeping</li>
+      <li>Payroll Support</li>
+      <li>QuickBooks</li>
+      <li>Tax-Season Prep</li>
+      <li>Catch-Up Cleanups</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============================================================
+     ABOUT SECTION — Patricia's story. Edit freely; write like
+     you talk. The [EDIT: ...] brackets need your real details.
+     ============================================================ -->
+<section id="about" aria-labelledby="about-title">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <!-- ======== HEADSHOT PLACEHOLDER ========
+           To use a real photo, replace this whole <div class="portrait">...</div>
+           block with:
+           <img src="patricia.jpg" alt="Patricia Woods, bookkeeper"
+                style="width:100%;max-width:400px;border-radius:24px;box-shadow:var(--shadow-lift);">
+           (Put patricia.jpg in the same folder as this file.) -->
+      <div class="portrait">
+        <div class="portrait-inner"><span aria-hidden="true">PW</span></div>
+        <span class="portrait-caption">Your photo goes here</span>
+      </div>
+    </div>
+
+    <div class="about-copy reveal d1">
+      <p class="eyebrow">Meet Patricia</p>
+      <h2 class="section-title" id="about-title">The bookkeeper who actually picks up the phone</h2>
+      <div style="margin-top:1.25rem">
+        <p>Hi, I'm Patricia Woods. I keep the books for small-business owners,
+        solopreneurs, contractors, and local shops — the people who wear every hat
+        in their business and shouldn't have to wear this one too.</p>
+        <p>Numbers are my happy place. I'm the person who <strong>hunts down a
+        seventeen-cent discrepancy</strong> because "close enough" isn't how I work.
+        But what my clients tell me they value most isn't the precision — it's the
+        patience. I never rush you, I never talk down to you, and I'll explain your
+        numbers as many times as it takes until they make sense.</p>
+        <p>Whether your books are pristine or you haven't opened them since
+        <em>[EDIT: a gentle joke — e.g. "two tax seasons ago"]</em>, you'll get the same
+        thing from me: steady hands, honest answers, and books you can trust.</p>
+      </div>
+
+      <blockquote class="about-quote">
+        &ldquo;My job is to do what's best for <em>you</em> — not what's fastest
+        for me. We go at your pace, always.&rdquo;
+        <cite>&mdash; Patricia Woods, Owner</cite>
+      </blockquote>
+
+      <ul class="about-facts">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          <span>[EDIT: your experience — e.g. "X years keeping small-business books"]</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <span>[EDIT: your area — e.g. "Based in Yourtown; serving clients everywhere remotely"]</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="15" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          <span>[EDIT: a credential or tool — e.g. "QuickBooks Online specialist"]</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.4-3 8.4-7 10-4-1.6-7-5.6-7-10V6l7-3z"/><path d="M9 12l2 2 4-4.5"/></svg>
+          <span>Your data handled with strict confidentiality</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SERVICES SECTION — one card per service
+     ============================================================ -->
+<section class="services" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">What I handle</p>
+      <h2 class="section-title" id="services-title">Everything your books need, under one steady hand</h2>
+      <p class="section-intro">From the monthly rhythm of reconciliation to the
+      one-time rescue of a messy backlog — pick what you need, or let's figure it
+      out together on a free call.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card reveal">
+        <div class="service-icon" aria-hidden="true">
+          <!-- open ledger book icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.4 3.5 4 3.5v15c4.4 0 6.5.5 8 2 1.5-1.5 3.6-2 8-2v-15c-4.4 0-6.5.5-8 2z"/><path d="M12 5.5v15M7 8.5h2.5M7 12h2.5M14.5 8.5H17M14.5 12H17"/></svg>
+        </div>
+        <h3>Monthly Bookkeeping &amp; Reconciliation</h3>
+        <p>Every transaction recorded, every account reconciled to the penny, every
+        month — so your books always reflect reality and nothing slips through.</p>
+      </article>
+
+      <article class="service-card reveal d1">
+        <div class="service-icon" aria-hidden="true">
+          <!-- opposing arrows icon (money in / money out) -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13M13.5 4.5L17 8l-3.5 3.5"/><path d="M20 16H7M10.5 12.5L7 16l3.5 3.5"/></svg>
+        </div>
+        <h3>Accounts Payable &amp; Receivable</h3>
+        <p>Bills paid on time, invoices sent and followed up, cash flow tracked —
+        you get paid faster and never damage a vendor relationship by accident.</p>
+      </article>
+
+      <article class="service-card reveal d2">
+        <div class="service-icon" aria-hidden="true">
+          <!-- document with bar chart icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6V3z"/><path d="M15 3v4h4"/><path d="M9.5 17v-4M12.5 17v-6.5M15.5 17v-2.5"/></svg>
+        </div>
+        <h3>Financial Statements &amp; Reporting</h3>
+        <p>Clear monthly statements plus a plain-English walkthrough, so you always
+        know how your business is really doing — not just what's in the bank today.</p>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon" aria-hidden="true">
+          <!-- two people icon (payroll / your team) -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20c.5-3.5 2.7-5.5 5.5-5.5s5 2 5.5 5.5"/><path d="M15.5 5.3a3.2 3.2 0 0 1 0 5.4"/><path d="M17.5 14.9c1.7.8 2.7 2.5 3 5.1"/></svg>
+        </div>
+        <h3>Payroll Support</h3>
+        <p>Your people paid correctly and on schedule, with the records kept tidy
+        behind the scenes. Payday stops being a source of stress — for anyone.</p>
+      </article>
+
+      <article class="service-card reveal d1">
+        <div class="service-icon" aria-hidden="true">
+          <!-- folder with checkmark icon (tax prep) -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4L11 7.5h8.5A1.5 1.5 0 0 1 21 9v9.5a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5v-12z"/><path d="M9 14.5l2 2 4-4.5"/></svg>
+        </div>
+        <h3>Tax-Season Prep for Your CPA</h3>
+        <p>Everything organized, labeled, and reconciled before your CPA ever asks.
+        Filing gets faster, cheaper, and calmer — and nothing gets missed.</p>
+      </article>
+
+      <article class="service-card reveal d2">
+        <div class="service-icon" aria-hidden="true">
+          <!-- clock rewind icon (catch-up) -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 1 0 2.3-5.6"/><path d="M4 3.5V7h3.5"/><path d="M12 8v4.5l3 1.8"/></svg>
+        </div>
+        <h3>Catch-Up &amp; Cleanup Bookkeeping</h3>
+        <p>Months — or years — behind? No lectures here. I'll untangle the backlog,
+        rebuild clean records, and get you current. It's my favorite kind of puzzle.</p>
+      </article>
+
+      <article class="service-card reveal">
+        <div class="service-icon" aria-hidden="true">
+          <!-- sliders/settings icon (QuickBooks setup) -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h9M17 7h3M4 12h3M11 12h9M4 17h9M17 17h3"/><circle cx="15" cy="7" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="15" cy="17" r="2"/></svg>
+        </div>
+        <h3>QuickBooks Setup &amp; Management</h3>
+        <p>Set up right from day one — or fixed if it wasn't. Clean accounts,
+        sensible categories, and a system you can actually understand and use.</p>
+      </article>
+
+      <!-- Invitation card: fills the last grid spot with a CTA -->
+      <article class="service-card card-cta reveal d1">
+        <h3>Not sure what you need?</h3>
+        <p>That's completely normal — most of my clients weren't sure either.
+        Tell me where things stand and we'll sort it out together.</p>
+        <a class="btn btn-gold" href="#contact">Let's talk it through
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY SECTION — the four promises (dark green panel)
+     ============================================================ -->
+<section class="why on-dark" id="why" aria-labelledby="why-title">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Why clients stay</p>
+      <h2 class="section-title" id="why-title">Four things you can count on. Literally.</h2>
+      <p class="section-intro">There are plenty of bookkeepers. Here's what working
+      with this one actually feels like.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <!-- target icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg>
+        <h3>Accuracy, obsessively</h3>
+        <p>Reconciled to the penny, every time. If something is off by seventeen
+        cents, I will find out why. Your books will hold up to any scrutiny.</p>
+      </div>
+
+      <div class="why-card reveal d1">
+        <!-- speech bubble icon -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 21l2-5.6A8.5 8.5 0 1 1 21 11.5z"/><path d="M8.5 10.5h7M8.5 13.5h4.5"/></svg>
+        <h3>Actually reachable</h3>
+        <p>Questions get answered by me — not a ticket queue. When something's on
+        your mind about your money, you'll never be left wondering.</p>
+      </div>
+
+      <div class="why-card reveal d2">
+        <!-- teacup icon: the "we go at your pace" promise -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h13v5.5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3.5c-.8 1-.8 2 0 3M12 3.5c-.8 1-.8 2 0 3"/></svg>
+        <h3>Never rushed, ever</h3>
+        <p>We go at your pace. I'll explain anything as many times as you need,
+        and I'll always do what's best for you — not what's quickest for me.</p>
+      </div>
+
+      <div class="why-card reveal d3">
+        <!-- feather icon: lightness / peace of mind -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4c-6 0-11 3-13 9-1 3-1.5 5.5-1.5 7.5C7.5 20.5 10 20 13 19c6-2 9-7 7-15z"/><path d="M5.5 20.5C9 14 13 10 17.5 7"/></svg>
+        <h3>Peace of mind</h3>
+        <p>Sleep-at-night books: current, clean, and tax-ready. You focus on
+        running the business — the financial worry moves off your desk onto mine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROCESS SECTION — how it works in 3 steps
+     ============================================================ -->
+<section id="process" aria-labelledby="process-title">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">How it works</p>
+      <h2 class="section-title" id="process-title">Getting started is the easy part</h2>
+      <p class="section-intro">No contracts to decode, no hoops to jump through.
+      Three simple steps and your books are in good hands.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <span class="step-num" aria-hidden="true">01</span>
+        <h3>We talk. For free.</h3>
+        <p>A relaxed, no-pressure conversation about your business and where your
+        books stand today. Bring your questions — messy books welcome. No judgment,
+        no obligation, no sales pitch.</p>
+        <span class="step-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6.5l6 5.5-6 5.5"/></svg>
+        </span>
+      </div>
+
+      <div class="step reveal d1">
+        <span class="step-num" aria-hidden="true">02</span>
+        <h3>I build your plan.</h3>
+        <p>You get a clear, plain-English proposal: exactly what I'll handle, how
+        often, and what it costs. If catch-up work is needed first, I'll map that
+        out too — no surprises, ever.</p>
+        <span class="step-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6.5l6 5.5-6 5.5"/></svg>
+        </span>
+      </div>
+
+      <div class="step reveal d2">
+        <span class="step-num" aria-hidden="true">03</span>
+        <h3>You get your time back.</h3>
+        <p>I take it from here. Your books stay current and reconciled, reports
+        arrive like clockwork, and the receipt pile stops haunting you. That's the
+        whole point.</p>
+        <span class="step-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS SECTION
+     *** THESE ARE SAMPLE PLACEHOLDER QUOTES — replace each quote
+     and name with real client words before or after launch. ***
+     ============================================================ -->
+<section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Kind words</p>
+      <h2 class="section-title" id="testimonials-title">What clients say about working with Patricia</h2>
+      <p class="sample-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.01"/></svg>
+        Sample testimonials — replace with real client quotes
+      </p>
+    </div>
+
+    <div class="quote-grid">
+      <figure class="quote-card reveal">
+        <svg class="quote-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 5C4 6.8 2.5 9.4 2.5 12.6c0 3.6 2.1 6.4 5.1 6.4 2.3 0 4-1.7 4-3.9 0-2.1-1.5-3.7-3.6-3.7-.4 0-.9.1-1.1.2.3-2 1.7-3.9 3.6-5L6.5 5zm11 0C15 6.8 13.5 9.4 13.5 12.6c0 3.6 2.1 6.4 5.1 6.4 2.3 0 4-1.7 4-3.9 0-2.1-1.5-3.7-3.6-3.7-.4 0-.9.1-1.1.2.3-2 1.7-3.9 3.6-5L17.5 5z"/></svg>
+        <blockquote>I hadn't opened my books in over a year and I was too embarrassed
+        to ask for help. Patricia never made me feel bad for a second — she just
+        quietly fixed everything. I finally sleep at night.</blockquote>
+        <figcaption class="quote-who">
+          <span class="quote-avatar" aria-hidden="true">[E]</span>
+          <span>
+            <span class="name">[EDIT: real client name]</span><br>
+            <span class="role">[EDIT: business type, e.g. "Contractor"]</span>
+          </span>
+        </figcaption>
+      </figure>
+
+      <figure class="quote-card reveal d1">
+        <svg class="quote-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 5C4 6.8 2.5 9.4 2.5 12.6c0 3.6 2.1 6.4 5.1 6.4 2.3 0 4-1.7 4-3.9 0-2.1-1.5-3.7-3.6-3.7-.4 0-.9.1-1.1.2.3-2 1.7-3.9 3.6-5L6.5 5zm11 0C15 6.8 13.5 9.4 13.5 12.6c0 3.6 2.1 6.4 5.1 6.4 2.3 0 4-1.7 4-3.9 0-2.1-1.5-3.7-3.6-3.7-.4 0-.9.1-1.1.2.3-2 1.7-3.9 3.6-5L17.5 5z"/></svg>
+        <blockquote>Tax season used to mean panic and a shoebox of receipts. This
+        year my CPA said it was the cleanest set of books he'd seen from a small
+        business. That was all Patricia.</blockquote>
+        <figcaption class="quote-who">
+          <span class="quote-avatar" aria-hidden="true">[E]</span>
+          <span>
+            <span class="name">[EDIT: real client name]</span><br>
+            <span class="role">[EDIT: business type, e.g. "Boutique owner"]</span>
+          </span>
+        </figcaption>
+      </figure>
+
+      <figure class="quote-card reveal d2">
+        <svg class="quote-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 5C4 6.8 2.5 9.4 2.5 12.6c0 3.6 2.1 6.4 5.1 6.4 2.3 0 4-1.7 4-3.9 0-2.1-1.5-3.7-3.6-3.7-.4 0-.9.1-1.1.2.3-2 1.7-3.9 3.6-5L6.5 5zm11 0C15 6.8 13.5 9.4 13.5 12.6c0 3.6 2.1 6.4 5.1 6.4 2.3 0 4-1.7 4-3.9 0-2.1-1.5-3.7-3.6-3.7-.4 0-.9.1-1.1.2.3-2 1.7-3.9 3.6-5L17.5 5z"/></svg>
+        <blockquote>What I appreciate most is that she explains things until I
+        actually understand them. I know exactly where my business stands every
+        single month. I've never had that before.</blockquote>
+        <figcaption class="quote-who">
+          <span class="quote-avatar" aria-hidden="true">[E]</span>
+          <span>
+            <span class="name">[EDIT: real client name]</span><br>
+            <span class="role">[EDIT: business type, e.g. "Café owner"]</span>
+          </span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ SECTION — the questions every new client asks.
+     To add a question, copy one whole <details>...</details>
+     block and edit the text inside it.
+     ============================================================ -->
+<section id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Good questions</p>
+      <h2 class="section-title" id="faq-title">Things people usually ask before they call</h2>
+      <p class="section-intro">If your question isn't here, just ask — there's no
+      such thing as a silly question about your own money.</p>
+    </div>
+
+    <div class="faq-list reveal d1">
+      <details class="faq-item">
+        <summary>
+          How much does bookkeeping cost?
+          <span class="faq-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p class="faq-body">It depends on the size and state of your books, which is
+        why I never quote blind. After our free consultation you'll get a clear,
+        flat monthly price in writing — no hourly meter running, no surprise
+        invoices. If the scope ever changes, we talk about it first.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          My books are a mess. Honestly, years behind. Can you still help?
+          <span class="faq-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p class="faq-body">Yes — and you'd be surprised how many of my favorite
+        clients started exactly there. Catch-up work is a specialty of mine, and
+        there is no judgment here, ever. We'll untangle it one month at a time
+        until you're current, and then keep you that way.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          Do you replace my CPA or tax preparer?
+          <span class="faq-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p class="faq-body">No — I make them love you. A bookkeeper keeps your
+        records clean all year; your CPA uses those records to file your taxes.
+        I hand your CPA a tidy, reconciled, fully organized package, which
+        usually means faster filing and fewer billable hours on their end.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          What software do you work with?
+          <span class="faq-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p class="faq-body">QuickBooks is my home turf — I set it up, clean it up,
+        and manage it day to day. If you're on something else (or on a shoebox
+        of receipts), tell me what you've got and we'll work out the best path.
+        You don't need to have anything figured out before we talk.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          Do we need to meet in person?
+          <span class="faq-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p class="faq-body">Whatever works best for you. Most bookkeeping happens
+        comfortably by email, phone, and secure file sharing.
+        [EDIT: add your local option — e.g. "If you're in the Yourtown area,
+        I'm always happy to meet over coffee."]</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          Is my financial information safe with you?
+          <span class="faq-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </summary>
+        <p class="faq-body">Completely. Your records are handled with strict
+        confidentiality, shared only with people you authorize (like your CPA),
+        and we'll set up a simple, secure way to exchange documents from day one.
+        Your business stays your business.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT SECTION — the form opens the visitor's email app
+     with a message pre-addressed to 1prw60.pw@gmail.com
+     ============================================================ -->
+<section id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">Get started</p>
+      <h2 class="section-title" id="contact-title">Let's take the books off your plate</h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <p>Tell me a little about your business and where your books stand —
+        even if the honest answer is "I have no idea." That's a perfectly good
+        starting point, and you won't be judged for it here.</p>
+
+        <div class="email-row">
+          <a class="contact-email" href="mailto:1prw60.pw@gmail.com?subject=Bookkeeping%20inquiry%20from%20your%20website">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>
+            1prw60.pw@gmail.com
+          </a>
+          <button type="button" class="copy-btn" id="copy-email" aria-label="Copy email address to clipboard">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span>Copy</span>
+          </button>
+        </div>
+
+        <ul class="contact-expect">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+            <span>A personal reply from Patricia — not an autoresponder</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+            <span>A free, no-pressure consultation to talk through your needs</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>
+            <span>Zero obligation — if I'm not the right fit, I'll say so</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- The form below builds an email and opens the visitor's
+           mail app addressed to Patricia. No server required. -->
+      <form class="contact-form reveal d1" id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="cf-name">Your name</label>
+            <input type="text" id="cf-name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="cf-business">Business name <span class="opt">(optional)</span></label>
+            <input type="text" id="cf-business" name="business" autocomplete="organization">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="cf-email">Your email</label>
+          <input type="email" id="cf-email" name="email" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+          <label for="cf-topic">What can I help with?</label>
+          <select id="cf-topic" name="topic">
+            <option>Monthly bookkeeping &amp; reconciliation</option>
+            <option>Accounts payable / receivable</option>
+            <option>Financial statements &amp; reporting</option>
+            <option>Payroll support</option>
+            <option>Tax-season prep for my CPA</option>
+            <option>Catch-up / cleanup — I'm behind</option>
+            <option>QuickBooks setup or management</option>
+            <option selected>Not sure yet — and that's okay</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="cf-message">Tell me a little about your situation</label>
+          <textarea id="cf-message" name="message" placeholder="What kind of business do you run? Where do your books stand today? Anything keeping you up at night?"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+          Send my message
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+
+        <p class="form-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.01"/></svg>
+          <span>This button opens your email app with everything pre-filled — just
+          hit send and it comes straight to Patricia.</span>
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER SECTION
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <div class="brand-mark" aria-hidden="true" style="background:var(--gold-500);color:var(--pine-950)">PW</div>
+        <span class="brand-text">
+          <span class="brand-name">Patricia Woods</span>
+          <span class="brand-tag">Bookkeeping</span>
+        </span>
+      </a>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Me</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2026</span> Patricia Woods Bookkeeping. All rights reserved.</p>
+      <p><a href="mailto:1prw60.pw@gmail.com?subject=Bookkeeping%20inquiry%20from%20your%20website">1prw60.pw@gmail.com</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating back-to-top button -->
+<button type="button" class="to-top" id="to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<script>
+/* ============================================================
+   JAVASCRIPT — you shouldn't need to touch anything below.
+   1. Mobile hamburger menu
+   2. Header shadow + gold scroll-progress line + back-to-top
+   3. Gentle fade-in as sections come into view
+   4. Contact form → opens visitor's email app (mailto)
+   5. Auto-updating copyright year
+   6. Nav highlights the section you're reading (scrollspy)
+   7. The hero ledger "reconciles itself" when it appears
+   8. Copy-email button
+   ============================================================ */
+
+/* 1 — Mobile menu */
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+navToggle.addEventListener('click', () => {
+  const open = navMenu.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', open);
+  navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+});
+/* close the menu after tapping any link inside it */
+navMenu.addEventListener('click', (e) => {
+  if (e.target.closest('a')) {
+    navMenu.classList.remove('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  }
+});
+
+/* 2 — Header shadow, scroll-progress line, back-to-top visibility */
+const header = document.querySelector('.site-header');
+const progress = document.getElementById('scroll-progress');
+const toTop = document.getElementById('to-top');
+const onScroll = () => {
+  header.classList.toggle('scrolled', window.scrollY > 8);
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.transform = `scaleX(${max > 0 ? Math.min(window.scrollY / max, 1) : 0})`;
+  toTop.classList.toggle('show', window.scrollY > 700);
+};
+onScroll();
+window.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener('resize', onScroll, { passive: true });
+toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+/* 3 — Fade-in on scroll (respects "reduce motion" settings) */
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach((el) => io.observe(el));
+} else {
+  reveals.forEach((el) => el.classList.add('in'));
+}
+
+/* 4 — Contact form: build a pre-filled email to Patricia.
+       To change the destination address, edit BUSINESS_EMAIL. */
+const BUSINESS_EMAIL = '1prw60.pw@gmail.com';
+document.getElementById('contact-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const val = (id) => document.getElementById(id).value.trim();
+  const name = val('cf-name');
+  const business = val('cf-business');
+  const email = val('cf-email');
+  const topic = val('cf-topic');
+  const message = val('cf-message');
+
+  if (!name || !email) {
+    alert('Please fill in your name and email so Patricia can reply to you.');
+    return;
+  }
+
+  const subject = `Bookkeeping inquiry from ${name}` + (business ? ` (${business})` : '');
+  const body = [
+    `Hi Patricia,`,
+    ``,
+    `Name: ${name}`,
+    business ? `Business: ${business}` : null,
+    `Email: ${email}`,
+    `Interested in: ${topic}`,
+    ``,
+    `About my situation:`,
+    message || '(They left this blank — reach out to learn more.)',
+  ].filter((line) => line !== null).join('\n');
+
+  window.location.href =
+    `mailto:${BUSINESS_EMAIL}` +
+    `?subject=${encodeURIComponent(subject)}` +
+    `&body=${encodeURIComponent(body)}`;
+
+  /* friendly confirmation on the button */
+  const sendBtn = e.target.querySelector('button[type="submit"]');
+  const original = sendBtn.innerHTML;
+  sendBtn.innerHTML = 'Opening your email app&hellip;';
+  setTimeout(() => { sendBtn.innerHTML = original; }, 4000);
+});
+
+/* 5 — Copyright year stays current automatically */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* 6 — Scrollspy: underline the nav link for the section in view */
+const spyTargets = ['about', 'services', 'why', 'process', 'testimonials', 'faq', 'contact']
+  .map((id) => document.getElementById(id))
+  .filter(Boolean);
+const navAnchors = document.querySelectorAll('.nav-links a:not(.btn)');
+if ('IntersectionObserver' in window) {
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      navAnchors.forEach((a) => {
+        a.classList.toggle('active', a.getAttribute('href') === `#${entry.target.id}`);
+      });
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  spyTargets.forEach((sec) => spy.observe(sec));
+}
+
+/* 7 — Hero ledger animation: rows tick off one by one, then the
+       difference counts down to $0.00 and the badge lights up. */
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const ledger = document.getElementById('ledger-card');
+if (ledger && !prefersReduced && 'IntersectionObserver' in window) {
+  ledger.classList.add('animate');
+  const zeroEl = document.getElementById('ledger-zero');
+  const rows = ledger.querySelectorAll('.ledger-row');
+  const START_OFF = 148.72; // decorative starting "discrepancy"
+  zeroEl.textContent = `Off by $${START_OFF.toFixed(2)}`;
+
+  const runLedger = () => {
+    rows.forEach((row, i) => {
+      setTimeout(() => row.classList.add('done'), 500 + i * 480);
+    });
+    const countStart = 500 + rows.length * 480;
+    setTimeout(() => {
+      const dur = 1100;
+      const t0 = performance.now();
+      const tick = (now) => {
+        const p = Math.min((now - t0) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3); // ease-out
+        const val = START_OFF * (1 - eased);
+        zeroEl.textContent = `Off by $${val.toFixed(2)}`;
+        if (p < 1) requestAnimationFrame(tick);
+        else ledger.classList.add('balanced');
+      };
+      requestAnimationFrame(tick);
+    }, countStart);
+  };
+
+  const ledgerIO = new IntersectionObserver((entries) => {
+    if (entries.some((e) => e.isIntersecting)) {
+      runLedger();
+      ledgerIO.disconnect();
+    }
+  }, { threshold: 0.4 });
+  ledgerIO.observe(ledger);
+}
+
+/* 8 — Copy-email button */
+const copyBtn = document.getElementById('copy-email');
+copyBtn.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(BUSINESS_EMAIL);
+    copyBtn.classList.add('copied');
+    copyBtn.querySelector('span').textContent = 'Copied';
+    setTimeout(() => {
+      copyBtn.classList.remove('copied');
+      copyBtn.querySelector('span').textContent = 'Copy';
+    }, 2200);
+  } catch (err) {
+    /* clipboard blocked (e.g. very old browser) — select-friendly fallback */
+    window.prompt('Copy the email address below:', BUSINESS_EMAIL);
+  }
+});
+</script>
+</body>
+</html>

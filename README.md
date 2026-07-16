@@ -1,4 +1,7 @@
-# Patricia Woods Bookkeeping — Website
+# Integrity Bookkeeping Service — Website
+
+Business: **Integrity Bookkeeping Service** (Patricia Woods) ·
+Domain: **woodsintegrityservice.com**
 
 The entire website is **one file: `index.html`**. No installs, no builds, no
 subscriptions. Double-click it and it opens in your browser, working exactly
@@ -47,8 +50,13 @@ the top of the styles control the whole site.
 3. Change nothing — no framework, no build command — and click **Deploy**.
 4. Your site is live at `https://<project-name>.vercel.app` in about
    30 seconds, and it automatically redeploys every time the site files
-   change on GitHub. Add a custom domain later under
-   **Project → Settings → Domains**.
+   change on GitHub.
+5. **Connect the real domain:** go to **Project → Settings → Domains**,
+   type `woodsintegrityservice.com`, and follow the two DNS steps Vercel
+   shows you (you set those at the company where the domain was bought).
+   Vercel handles the HTTPS certificate automatically, and it's smart to
+   let it redirect `www.woodsintegrityservice.com` to the main domain
+   (it offers this during setup).
 
    (The `vercel.json` file in this folder is already set up — it adds
    security headers and tidy URLs. You never need to touch it.)
@@ -65,8 +73,8 @@ the top of the styles control the whole site.
    main branch and the `/ (root)` folder, and save.
 3. After a minute your site is live at `https://<your-username>.github.io/<repo-name>/`.
 
-A custom domain (e.g. `patriciawoodsbookkeeping.com`) can be pointed at
-either option later — both have simple guides for it.
+`woodsintegrityservice.com` can be pointed at options B and C too, but
+Vercel's domain setup (option A, step 5) is the smoothest.
 
 ## Placeholders still waiting for your real details
 

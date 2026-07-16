@@ -39,9 +39,12 @@ the top of the styles control the whole site.
   top of the site and in the About section. To update it, just replace that
   file with a new one (same name). Portrait orientation looks best, and
   keeping it under ~500 KB keeps the site fast.
-- **Logo:** search for `LOGO PLACEHOLDER` in the navigation. The comment
-  there shows what to replace. (The gold "IB" monogram works nicely until
-  you have one.)
+- **Logo:** the site has a custom logo — an open ledger book with a
+  checkmark, gold on purple. It lives in the navigation, footer, browser
+  tab, share card, and as the standalone file `logo.svg` (use that file
+  for business cards, invoices, social profiles, etc.). To use a different
+  logo instead, search for `LOGO` in `index.html` — the comment there
+  shows exactly what to swap.
 
 ## How to put it online — free, in about 2 minutes
 

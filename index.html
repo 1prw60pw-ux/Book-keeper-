@@ -12,6 +12,7 @@
        • Your email address ......... search for  patsbookkeeping25@gmail.com
        • Your name / logo ........... search for  SITE NAME
        • Hero (big top headline) .... search for  HERO SECTION
+       • Value proposition .......... search for  VALUE PROPOSITION SECTION
        • About you .................. search for  ABOUT SECTION
        • Services ................... search for  SERVICES SECTION
        • Why choose me .............. search for  WHY SECTION
@@ -388,6 +389,29 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
   .ticker ul{gap:.4rem 1.4rem}
   .ticker li{gap:1.4rem}
 }
+
+/* ============================================================
+   VALUE PROPOSITION
+   ============================================================ */
+.value{background:var(--paper);border-bottom:1px solid var(--line)}
+.value-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:clamp(1.5rem,4vw,3rem);margin-top:3.25rem;text-align:center;
+}
+.value-card h3{font-size:1.3rem;margin-bottom:.65rem}
+.value-card p{font-size:.97rem;color:var(--muted);max-width:34ch;margin-inline:auto}
+.value-icon{
+  width:64px;height:64px;border-radius:50%;margin:0 auto 1.3rem;
+  background:var(--plum-900);color:#fff;
+  display:grid;place-items:center;
+  box-shadow:var(--shadow-soft);
+}
+.value-icon svg{width:30px;height:30px}
+.value-cta{
+  margin-top:3.25rem;display:flex;flex-direction:column;align-items:center;gap:.9rem;
+}
+.value-note{font-size:.88rem;color:var(--muted)}
+@media (max-width:840px){.value-grid{grid-template-columns:1fr;gap:2.25rem}}
 
 /* ============================================================
    ABOUT
@@ -829,6 +853,61 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
     </ul>
   </div>
 </div>
+
+<!-- ============================================================
+     VALUE PROPOSITION SECTION — what hiring Patricia actually
+     buys you. Sits right after the hero, before her story.
+     ============================================================ -->
+<section class="value" id="value" aria-labelledby="value-title">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;max-width:760px;margin-inline:auto">
+      <p class="eyebrow" style="justify-content:center">Why it's worth it</p>
+      <h2 class="section-title" id="value-title" style="margin-inline:auto">What you get back is bigger than clean books</h2>
+      <p class="section-intro" style="margin-inline:auto">Bookkeeping isn't really
+      about the numbers. It's about what accurate numbers buy you: your time,
+      your calm, and decisions you can actually trust.</p>
+    </div>
+
+    <div class="value-grid">
+      <div class="value-card reveal">
+        <div class="value-icon" aria-hidden="true">
+          <!-- clock icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        </div>
+        <h3>Your time back</h3>
+        <p>The hours you spend wrestling receipts and invoices go back where they
+        belong — into your customers, your craft, and your evenings.</p>
+      </div>
+
+      <div class="value-card reveal d1">
+        <div class="value-icon" aria-hidden="true">
+          <!-- folder with check icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4L11 7.5h8.5A1.5 1.5 0 0 1 21 9v9.5a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5v-12z"/><path d="M9 14.5l2 2 4-4.5"/></svg>
+        </div>
+        <h3>Tax-ready, all year</h3>
+        <p>QuickBooks kept organized and reconciled every single month — so tax
+        season becomes a simple handoff to your CPA, not an April panic.</p>
+      </div>
+
+      <div class="value-card reveal d2">
+        <div class="value-icon" aria-hidden="true">
+          <!-- rising chart icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4v16h16"/><path d="M7.5 14.5l4-4.5 3 3 5-6"/><path d="M19.5 10.5V7h-3.5"/></svg>
+        </div>
+        <h3>Decisions with confidence</h3>
+        <p>When you know exactly what's coming in and going out, pricing, hiring,
+        and growing stop being guesswork and start being choices.</p>
+      </div>
+    </div>
+
+    <div class="value-cta reveal">
+      <a class="btn btn-primary" href="#contact">Book a free consultation
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <span class="value-note">Free consult &middot; no obligation &middot; no judgment about where your books stand</span>
+    </div>
+  </div>
+</section>
 
 <!-- ============================================================
      ABOUT SECTION — Patricia's story. Edit freely; write like

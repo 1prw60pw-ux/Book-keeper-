@@ -76,6 +76,36 @@ the top of the styles control the whole site.
 `woodsintegrityservice.com` can be pointed at options B and C too, but
 Vercel's domain setup (option A, step 5) is the smoothest.
 
+## SEO — what's built in, and the 30 minutes that matter most
+
+**Already built into the site** (nothing to do):
+- Search-optimized page title and description
+- Structured data (schema.org) telling Google this is an accounting/bookkeeping
+  service, who runs it, all seven services, and the full FAQ — the FAQ is
+  eligible to appear directly in Google results
+- A social-share card (`og-image.png`) so links look professional when texted
+  or posted on Facebook/LinkedIn
+- `sitemap.xml` and `robots.txt` for search-engine crawlers
+- Fast, mobile-friendly, accessible single page — all things Google rewards
+
+**The highest-impact things only Patricia can do** (each is free):
+1. **Google Business Profile** — the single biggest lever for a local service
+   business. Create one at https://business.google.com with the exact name
+   "Integrity Bookkeeping Service", the website link, and the service list.
+   This is what puts the business on Google Maps and in the local results box.
+2. **Google Search Console** — at https://search.google.com/search-console,
+   add the domain, verify it (Vercel makes this a one-click DNS record), and
+   submit `https://woodsintegrityservice.com/sitemap.xml`. This gets the site
+   indexed fast and shows what people searched to find it.
+3. **Reviews** — after each happy client, ask for a Google review on the
+   Business Profile. Five genuine reviews outrank a thousand keywords.
+4. **Real details on the page** — filling in the `[EDIT:]` placeholders
+   (years of experience, book titles, real testimonials) directly improves
+   how trustworthy the page looks to both people and Google.
+5. **A few good links** — a listing in the local chamber of commerce,
+   QuickBooks ProAdvisor directory (if certified), and Patricia's author
+   pages linking to the site all build authority.
+
 ## Placeholders still waiting for your real details
 
 Search `index.html` for `[EDIT:` to find them all. The full list:

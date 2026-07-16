@@ -352,8 +352,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 }
 .hero-trust svg{width:20px;height:20px;flex:none;color:var(--gold-600)}
 
-/* Patricia's hero photo with a gold offset frame, plus the little
-   "reconciled ledger" card pinned to its bottom corner. */
+/* Patricia's hero photo with a gold offset frame */
 .hero-visual{position:relative;width:100%;max-width:500px;justify-self:end}
 .hero-visual::before{
   content:"";position:absolute;inset:0;z-index:-1;
@@ -366,49 +365,9 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
   border-radius:26px;box-shadow:var(--shadow-lift);
   transform:rotate(1.2deg);
 }
-.ledger-card{
-  position:absolute;left:-3.2rem;bottom:-2.4rem;
-  width:min(330px,94%);
-  background:var(--paper);border:1px solid var(--line);border-radius:20px;
-  box-shadow:var(--shadow-lift);
-  padding:1.35rem 1.35rem 1.15rem;
-  transform:rotate(-2deg);
-}
-.ledger-head{
-  display:flex;align-items:center;justify-content:space-between;
-  padding-bottom:.8rem;border-bottom:1px solid var(--line);margin-bottom:.3rem;
-}
-.ledger-head h3{font-size:.95rem;font-weight:600}
-.ledger-badge{
-  font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--plum-900);background:var(--gold-200);
-  padding:.3rem .65rem;border-radius:999px;
-}
-.ledger-row{
-  display:flex;align-items:center;gap:.7rem;
-  padding:.55rem 0;border-bottom:1px dashed var(--line);
-  font-size:.85rem;
-}
-.ledger-row:last-of-type{border-bottom:0}
-.ledger-row .tick{
-  width:20px;height:20px;flex:none;border-radius:50%;
-  background:var(--plum-900);color:var(--gold-500);
-  display:grid;place-items:center;
-}
-.ledger-row .tick svg{width:11px;height:11px}
-.ledger-row .label{flex:1;color:var(--ink)}
-.ledger-row .amount{font-variant-numeric:tabular-nums;color:var(--muted);font-size:.76rem}
-.ledger-foot{
-  margin-top:.8rem;padding-top:.8rem;border-top:1px solid var(--line);
-  display:flex;justify-content:space-between;align-items:baseline;gap:.8rem;
-}
-.ledger-foot .word{font-family:'Fraunces',serif;font-style:italic;font-size:.92rem;color:var(--gold-600)}
-.ledger-foot .zero{font-variant-numeric:tabular-nums;font-weight:600;font-size:.92rem;color:var(--plum-900)}
-
 @media (max-width:840px){
   .hero-grid{grid-template-columns:1fr}
   .hero-visual{max-width:420px;justify-self:start;margin-top:.75rem}
-  .ledger-card{left:auto;right:-.6rem;bottom:-2rem;width:min(295px,88%)}
 }
 
 /* Thin strip listing specialties under the hero */
@@ -437,10 +396,9 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
   display:grid;grid-template-columns:.9fr 1.1fr;
   gap:clamp(2.5rem,6vw,5.5rem);align-items:center;
 }
-/* Patricia's photo in the About section */
+/* Patricia's photo in the About section (head-and-shoulders crop) */
 .about-photo{
   display:block;width:100%;max-width:400px;
-  aspect-ratio:4/4.6;object-fit:cover;object-position:50% 20%;
   border-radius:24px;box-shadow:var(--shadow-lift);
 }
 .about-copy p + p{margin-top:1.1rem}
@@ -698,17 +656,6 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .nav-links a:not(.btn).active{color:var(--plum-900)}
 .nav-links a:not(.btn).active::after{transform:scaleX(1)}
 
-/* Hero ledger: rows start dim, then "reconcile" one by one (JS adds
-   .animate on load and .done per row as the card scrolls into view) */
-.ledger-card .tick{transition:transform .4s cubic-bezier(.34,1.56,.64,1), opacity .3s var(--ease)}
-.ledger-card .ledger-row,.ledger-card .ledger-foot,.ledger-card .ledger-badge{transition:opacity .5s var(--ease)}
-.ledger-card.animate .ledger-row{opacity:.28}
-.ledger-card.animate .ledger-row .tick{transform:scale(.55);opacity:.35}
-.ledger-card.animate .ledger-badge{opacity:.25}
-.ledger-card.animate .ledger-row.done{opacity:1}
-.ledger-card.animate .ledger-row.done .tick{transform:scale(1);opacity:1}
-.ledger-card.animate.balanced .ledger-badge{opacity:1}
-
 /* FAQ accordion (uses native <details> so it works without JS) */
 .faq-list{max-width:840px;margin-top:2.75rem;display:grid;gap:1rem}
 .faq-item{
@@ -858,42 +805,11 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
       </p>
     </div>
 
-    <!-- Patricia's photo with the reconciled-ledger card pinned to its
-         corner. To change the photo, replace the file patricia.jpg in
-         this folder (portrait orientation looks best). -->
+    <!-- Patricia's photo. To change it, replace the file patricia.jpg
+         in this folder (portrait orientation looks best). -->
     <div class="reveal d1 hero-visual">
       <img class="hero-photo" src="patricia.jpg" width="900" height="1200" fetchpriority="high"
            alt="Patricia Woods, owner of Integrity Bookkeeping Service, smiling in front of a flower wall">
-      <div class="ledger-card" id="ledger-card" aria-hidden="true">
-        <div class="ledger-head">
-          <h3>Monthly Close</h3>
-          <span class="ledger-badge">Reconciled</span>
-        </div>
-        <div class="ledger-row">
-          <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>
-          <span class="label">Bank accounts matched</span>
-          <span class="amount">to the penny</span>
-        </div>
-        <div class="ledger-row">
-          <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>
-          <span class="label">Expenses categorized</span>
-          <span class="amount">every one</span>
-        </div>
-        <div class="ledger-row">
-          <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>
-          <span class="label">Invoices &amp; bills up to date</span>
-          <span class="amount">on time</span>
-        </div>
-        <div class="ledger-row">
-          <span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>
-          <span class="label">Reports ready to read</span>
-          <span class="amount">plain English</span>
-        </div>
-        <div class="ledger-foot">
-          <span class="word">Everything balances.</span>
-          <span class="zero" id="ledger-zero">Off by $0.00</span>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -918,10 +834,10 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 <section id="about" aria-labelledby="about-title">
   <div class="wrap about-grid">
     <div class="reveal">
-      <!-- Patricia's photo. To change it, replace the file patricia.jpg
-           in the same folder as this file. -->
-      <img class="about-photo" src="patricia.jpg" width="900" height="1200" loading="lazy"
-           alt="Patricia Woods standing in front of a greenery-and-flower wall">
+      <!-- Patricia's photo (close-up crop). To change it, replace the
+           file patricia-about.jpg in the same folder as this file. -->
+      <img class="about-photo" src="patricia-about.jpg" width="760" height="760" loading="lazy"
+           alt="Patricia Woods smiling in front of a greenery-and-flower wall">
     </div>
 
     <div class="about-copy reveal d1">
@@ -1497,8 +1413,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
    4. Contact form → opens visitor's email app (mailto)
    5. Auto-updating copyright year
    6. Nav highlights the section you're reading (scrollspy)
-   7. The hero ledger "reconciles itself" when it appears
-   8. Copy-email button
+   7. Copy-email button
    ============================================================ */
 
 /* 1 — Mobile menu */
@@ -1610,47 +1525,7 @@ if ('IntersectionObserver' in window) {
   spyTargets.forEach((sec) => spy.observe(sec));
 }
 
-/* 7 — Hero ledger animation: rows tick off one by one, then the
-       difference counts down to $0.00 and the badge lights up. */
-const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const ledger = document.getElementById('ledger-card');
-if (ledger && !prefersReduced && 'IntersectionObserver' in window) {
-  ledger.classList.add('animate');
-  const zeroEl = document.getElementById('ledger-zero');
-  const rows = ledger.querySelectorAll('.ledger-row');
-  const START_OFF = 148.72; // decorative starting "discrepancy"
-  zeroEl.textContent = `Off by $${START_OFF.toFixed(2)}`;
-
-  const runLedger = () => {
-    rows.forEach((row, i) => {
-      setTimeout(() => row.classList.add('done'), 500 + i * 480);
-    });
-    const countStart = 500 + rows.length * 480;
-    setTimeout(() => {
-      const dur = 1100;
-      const t0 = performance.now();
-      const tick = (now) => {
-        const p = Math.min((now - t0) / dur, 1);
-        const eased = 1 - Math.pow(1 - p, 3); // ease-out
-        const val = START_OFF * (1 - eased);
-        zeroEl.textContent = `Off by $${val.toFixed(2)}`;
-        if (p < 1) requestAnimationFrame(tick);
-        else ledger.classList.add('balanced');
-      };
-      requestAnimationFrame(tick);
-    }, countStart);
-  };
-
-  const ledgerIO = new IntersectionObserver((entries) => {
-    if (entries.some((e) => e.isIntersecting)) {
-      runLedger();
-      ledgerIO.disconnect();
-    }
-  }, { threshold: 0.4 });
-  ledgerIO.observe(ledger);
-}
-
-/* 8 — Copy-email button */
+/* 7 — Copy-email button */
 const copyBtn = document.getElementById('copy-email');
 copyBtn.addEventListener('click', async () => {
   try {

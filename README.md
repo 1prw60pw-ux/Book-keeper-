@@ -26,7 +26,7 @@ as it will online.
 3. Change the words between the tags (e.g. between `<p>` and `</p>`),
    save the file, and refresh your browser to see it.
 
-**To change the email address:** search for `1prw60.pw@gmail.com` and replace
+**To change the email address:** search for `patsbookkeeping25@gmail.com` and replace
 every occurrence (it appears a few times, including once in the JavaScript
 near the bottom as `BUSINESS_EMAIL`).
 

@@ -33,13 +33,14 @@ near the bottom as `BUSINESS_EMAIL`).
 **To change the colors:** search for `COLOR PALETTE` — the six color codes at
 the top of the styles control the whole site.
 
-## How to add your photo and logo
+## Photo and logo
 
-- **Headshot:** search for `HEADSHOT PLACEHOLDER`. The comment there shows the
-  exact line to paste in. Put your photo file (e.g. `patricia.jpg`) in the
-  same folder as `index.html`.
-- **Logo:** search for `LOGO PLACEHOLDER` in the navigation. Same idea — the
-  comment shows what to replace. (The gold "PW" monogram works nicely until
+- **Photo:** Patricia's photo is the file `patricia.jpg` and appears at the
+  top of the site and in the About section. To update it, just replace that
+  file with a new one (same name). Portrait orientation looks best, and
+  keeping it under ~500 KB keeps the site fast.
+- **Logo:** search for `LOGO PLACEHOLDER` in the navigation. The comment
+  there shows what to replace. (The gold "IB" monogram works nicely until
   you have one.)
 
 ## How to put it online — free, in about 2 minutes

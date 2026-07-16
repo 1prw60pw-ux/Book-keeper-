@@ -31,7 +31,7 @@
 <meta name="description" content="Monthly bookkeeping, QuickBooks setup, payroll support, tax-season prep & catch-up cleanups for small businesses. Texas-based, serving clients everywhere remotely. Free consultation.">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="Patricia Woods">
-<meta name="theme-color" content="#1d3a2f">
+<meta name="theme-color" content="#372359">
 
 <!-- SEO: the site's official address and social-share card info -->
 <link rel="canonical" href="https://woodsintegrityservice.com/">
@@ -155,7 +155,7 @@
 </script>
 
 <!-- Favicon: a small "PW" monogram drawn in code (no image file needed) -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d3a2f'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' fill='%23c89a55' text-anchor='middle'%3EIB%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23372359'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='26' fill='%23c89a55' text-anchor='middle'%3EIB%3C/text%3E%3C/svg%3E">
 
 <!-- Fonts: Fraunces (headlines) + Inter (body). Loaded from Google Fonts. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -167,22 +167,22 @@
    COLOR PALETTE — change these six values to re-skin the site
    ============================================================ */
 :root{
-  --pine-950:#12241d;      /* darkest green (footer, deep panels)   */
-  --pine-900:#1d3a2f;      /* primary deep forest green             */
-  --pine-800:#27493b;      /* lighter green (hovers, gradients)     */
-  --gold-600:#a97e3c;      /* deep gold (small text on cream)       */
+  --plum-950:#241640;      /* darkest purple (footer, deep panels)  */
+  --plum-900:#372359;      /* primary deep plum purple              */
+  --plum-800:#4a3175;      /* lighter purple (hovers, gradients)    */
+  --gold-600:#a97e3c;      /* deep gold (small text on light bg)    */
   --gold-500:#c89a55;      /* main gold accent                      */
-  --gold-200:#ead9b4;      /* pale gold (lines on dark green)       */
+  --gold-200:#ead9b4;      /* pale gold (lines on dark purple)      */
 
-  --cream:#faf5ec;         /* page background                       */
-  --paper:#fffdf7;         /* card background                       */
-  --ink:#22322b;           /* main text color                       */
-  --muted:#5c6b63;         /* softer secondary text                 */
-  --line:#e6ddc9;          /* hairline borders                      */
+  --cream:#faf7fc;         /* page background (lavender-white)      */
+  --paper:#fffdff;         /* card background                       */
+  --ink:#2b2338;           /* main text color                       */
+  --muted:#675e75;         /* softer secondary text                 */
+  --line:#e6dcee;          /* hairline borders                      */
 
   --radius:18px;
-  --shadow-soft:0 1px 2px rgba(29,58,47,.05), 0 10px 30px -12px rgba(29,58,47,.18);
-  --shadow-lift:0 2px 4px rgba(29,58,47,.06), 0 22px 44px -16px rgba(29,58,47,.28);
+  --shadow-soft:0 1px 2px rgba(48,31,77,.05), 0 10px 30px -12px rgba(48,31,77,.18);
+  --shadow-lift:0 2px 4px rgba(48,31,77,.06), 0 22px 44px -16px rgba(48,31,77,.28);
   --ease:cubic-bezier(.22,.61,.25,1);
 }
 
@@ -195,16 +195,16 @@ body{
   color:var(--ink);background:var(--cream);
   -webkit-font-smoothing:antialiased;
 }
-h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.15;color:var(--pine-900);letter-spacing:-.01em}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.15;color:var(--plum-900);letter-spacing:-.01em}
 img,svg{display:block;max-width:100%}
 a{color:inherit}
-::selection{background:var(--gold-200);color:var(--pine-950)}
+::selection{background:var(--gold-200);color:var(--plum-950)}
 
 :focus-visible{outline:3px solid var(--gold-500);outline-offset:3px;border-radius:4px}
 
 .skip-link{
   position:absolute;left:1rem;top:-4rem;z-index:200;
-  background:var(--pine-900);color:var(--cream);
+  background:var(--plum-900);color:var(--cream);
   padding:.6rem 1.1rem;border-radius:10px;text-decoration:none;font-weight:600;
   transition:top .2s var(--ease);
 }
@@ -236,38 +236,38 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 }
 .btn svg{width:1.05em;height:1.05em;transition:transform .18s var(--ease)}
 .btn:hover svg{transform:translateX(3px)}
-.btn-primary{background:var(--pine-900);color:var(--cream);box-shadow:var(--shadow-soft)}
-.btn-primary:hover{background:var(--pine-800);transform:translateY(-2px);box-shadow:var(--shadow-lift)}
-.btn-gold{background:var(--gold-500);color:var(--pine-950)}
+.btn-primary{background:var(--plum-900);color:var(--cream);box-shadow:var(--shadow-soft)}
+.btn-primary:hover{background:var(--plum-800);transform:translateY(-2px);box-shadow:var(--shadow-lift)}
+.btn-gold{background:var(--gold-500);color:var(--plum-950)}
 .btn-gold:hover{background:#d3a763;transform:translateY(-2px);box-shadow:var(--shadow-lift)}
-.btn-ghost{background:transparent;color:var(--pine-900);border-color:var(--pine-900)}
-.btn-ghost:hover{background:var(--pine-900);color:var(--cream);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--plum-900);border-color:var(--plum-900)}
+.btn-ghost:hover{background:var(--plum-900);color:var(--cream);transform:translateY(-2px)}
 .btn-ghost-light{background:transparent;color:var(--cream);border-color:var(--gold-200)}
-.btn-ghost-light:hover{background:var(--cream);color:var(--pine-900)}
+.btn-ghost-light:hover{background:var(--cream);color:var(--plum-900)}
 
 /* ============================================================
    NAVIGATION BAR
    ============================================================ */
 .site-header{
   position:sticky;top:0;z-index:100;
-  background:rgba(250,245,236,.88);
+  background:rgba(250,247,252,.88);
   backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
   border-bottom:1px solid transparent;
   transition:border-color .25s var(--ease), box-shadow .25s var(--ease);
 }
-.site-header.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px -18px rgba(29,58,47,.35)}
+.site-header.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px -18px rgba(48,31,77,.35)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:80px}
 
 .brand{display:inline-flex;align-items:center;gap:.8rem;text-decoration:none}
 .brand-mark{
   width:44px;height:44px;flex:none;border-radius:12px;
-  background:var(--pine-900);
+  background:var(--plum-900);
   display:grid;place-items:center;
   font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;color:var(--gold-500);
   letter-spacing:.02em;
 }
 .brand-text{line-height:1.2}
-.brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--pine-900);display:block}
+.brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--plum-900);display:block}
 .brand-tag{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-600)}
 
 .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
@@ -291,7 +291,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .nav-toggle-bars{position:relative;width:24px;height:16px;display:block}
 .nav-toggle-bars span{
   position:absolute;left:0;width:100%;height:2px;border-radius:2px;
-  background:var(--pine-900);transition:transform .25s var(--ease), opacity .2s, top .25s var(--ease);
+  background:var(--plum-900);transition:transform .25s var(--ease), opacity .2s, top .25s var(--ease);
 }
 .nav-toggle-bars span:nth-child(1){top:0}
 .nav-toggle-bars span:nth-child(2){top:7px}
@@ -306,7 +306,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
     position:absolute;top:100%;left:0;right:0;
     flex-direction:column;align-items:stretch;gap:0;
     background:var(--paper);border-bottom:1px solid var(--line);
-    box-shadow:0 24px 40px -20px rgba(29,58,47,.25);
+    box-shadow:0 24px 40px -20px rgba(48,31,77,.25);
     padding:.75rem 1.25rem 1.25rem;
     display:none;
   }
@@ -334,7 +334,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .hero::after{
   content:"";position:absolute;top:-25%;right:-12%;
   width:55%;aspect-ratio:1;border-radius:50%;
-  background:radial-gradient(circle, rgba(29,58,47,.07), transparent 65%);
+  background:radial-gradient(circle, rgba(48,31,77,.07), transparent 65%);
   pointer-events:none;
 }
 .hero-grid{
@@ -367,7 +367,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .ledger-head h3{font-size:1.05rem;font-weight:600}
 .ledger-badge{
   font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--pine-900);background:var(--gold-200);
+  color:var(--plum-900);background:var(--gold-200);
   padding:.3rem .65rem;border-radius:999px;
 }
 .ledger-row{
@@ -378,7 +378,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .ledger-row:last-of-type{border-bottom:0}
 .ledger-row .tick{
   width:22px;height:22px;flex:none;border-radius:50%;
-  background:var(--pine-900);color:var(--gold-500);
+  background:var(--plum-900);color:var(--gold-500);
   display:grid;place-items:center;
 }
 .ledger-row .tick svg{width:12px;height:12px}
@@ -388,11 +388,11 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
   margin-top:1.1rem;padding-top:1rem;border-top:1px solid var(--line);
   display:flex;justify-content:flex-end;align-items:baseline;
 }
-.ledger-foot .zero{font-variant-numeric:tabular-nums;font-weight:600;color:var(--pine-900)}
+.ledger-foot .zero{font-variant-numeric:tabular-nums;font-weight:600;color:var(--plum-900)}
 /* small floating note pinned to the card */
 .ledger-note{
   position:absolute;bottom:-3rem;left:-1.6rem;
-  background:var(--pine-900);color:var(--cream);
+  background:var(--plum-900);color:var(--cream);
   font-size:.85rem;line-height:1.45;
   padding:.85rem 1.1rem;border-radius:14px;
   box-shadow:var(--shadow-lift);
@@ -438,7 +438,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
   border-radius:24px;overflow:hidden;
   background:
     radial-gradient(120% 90% at 20% 10%, rgba(200,154,85,.35), transparent 55%),
-    linear-gradient(160deg, var(--pine-800), var(--pine-950));
+    linear-gradient(160deg, var(--plum-800), var(--plum-950));
   box-shadow:var(--shadow-lift);
   display:grid;place-items:center;
 }
@@ -462,7 +462,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .about-quote{
   margin-top:1.75rem;padding-left:1.25rem;border-left:3px solid var(--gold-500);
   font-family:'Fraunces',serif;font-style:italic;font-size:1.25rem;line-height:1.5;
-  color:var(--pine-900);
+  color:var(--plum-900);
 }
 .about-quote cite{
   display:block;margin-top:.5rem;font-family:'Inter',sans-serif;font-style:normal;
@@ -511,7 +511,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lift);border-color:var(--gold-500)}
 .service-icon{
   width:52px;height:52px;border-radius:14px;
-  background:var(--pine-900);color:var(--gold-500);
+  background:var(--plum-900);color:var(--gold-500);
   display:grid;place-items:center;margin-bottom:1.25rem;
 }
 .service-icon svg{width:26px;height:26px}
@@ -519,7 +519,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .service-card p{font-size:.95rem;color:var(--muted)}
 /* the final card is an invitation, styled differently */
 .service-card.card-cta{
-  background:var(--pine-900);border-color:var(--pine-900);
+  background:var(--plum-900);border-color:var(--plum-900);
   display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:1rem;
 }
 .service-card.card-cta h3{color:var(--cream)}
@@ -530,7 +530,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 /* ============================================================
    WHY CHOOSE ME (dark panel)
    ============================================================ */
-.why{background:linear-gradient(170deg,var(--pine-900),var(--pine-950));color:var(--cream)}
+.why{background:linear-gradient(170deg,var(--plum-900),var(--plum-950));color:var(--cream)}
 .why .section-title{color:var(--cream)}
 .why .section-intro{color:var(--gold-200)}
 .why-grid{
@@ -539,10 +539,10 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .why-card{
   border:1px solid rgba(234,217,180,.22);border-radius:var(--radius);
   padding:1.8rem 1.5rem;
-  background:rgba(255,253,247,.03);
+  background:rgba(255,253,255,.03);
   transition:background .22s var(--ease), transform .22s var(--ease), border-color .22s var(--ease);
 }
-.why-card:hover{background:rgba(255,253,247,.07);transform:translateY(-4px);border-color:var(--gold-500)}
+.why-card:hover{background:rgba(255,253,255,.07);transform:translateY(-4px);border-color:var(--gold-500)}
 .why-card svg{width:30px;height:30px;color:var(--gold-500);margin-bottom:1.1rem}
 .why-card h3{color:var(--cream);font-size:1.15rem;margin-bottom:.55rem}
 .why-card p{font-size:.92rem;color:var(--gold-200);line-height:1.65}
@@ -582,7 +582,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .sample-note{
   display:inline-flex;align-items:center;gap:.5rem;
   margin-top:1.1rem;padding:.45rem .9rem;border-radius:999px;
-  background:var(--gold-200);color:var(--pine-950);
+  background:var(--gold-200);color:var(--plum-950);
   font-size:.8rem;font-weight:600;
 }
 .sample-note svg{width:15px;height:15px}
@@ -601,7 +601,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .quote-who{display:flex;align-items:center;gap:.85rem;margin-top:1.6rem}
 .quote-avatar{
   width:42px;height:42px;flex:none;border-radius:50%;
-  background:var(--pine-900);color:var(--gold-500);
+  background:var(--plum-900);color:var(--gold-500);
   display:grid;place-items:center;
   font-family:'Fraunces',serif;font-size:.95rem;
 }
@@ -621,7 +621,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
   display:inline-flex;align-items:center;gap:.7rem;
   margin-top:1.75rem;padding:1rem 1.3rem;border-radius:14px;
   background:var(--paper);border:1px solid var(--line);
-  text-decoration:none;font-weight:600;color:var(--pine-900);
+  text-decoration:none;font-weight:600;color:var(--plum-900);
   transition:border-color .2s var(--ease), box-shadow .2s var(--ease), transform .2s var(--ease);
   word-break:break-all;
 }
@@ -638,7 +638,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
 .field{margin-bottom:1.1rem}
 .field label{
-  display:block;font-size:.85rem;font-weight:600;color:var(--pine-900);
+  display:block;font-size:.85rem;font-weight:600;color:var(--plum-900);
   margin-bottom:.45rem;letter-spacing:.02em;
 }
 .field label .opt{font-weight:400;color:var(--muted)}
@@ -654,7 +654,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 }
 .field textarea{resize:vertical;min-height:130px}
 .field select{appearance:none;-webkit-appearance:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%235c6b63' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23675e75' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
   background-repeat:no-repeat;background-position:right .9rem center;
   padding-right:2.5rem;
 }
@@ -667,7 +667,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
    FOOTER
    ============================================================ */
 .site-footer{
-  background:var(--pine-950);color:var(--gold-200);
+  background:var(--plum-950);color:var(--gold-200);
   padding-block:3.25rem 2.5rem;
 }
 .footer-top{
@@ -708,7 +708,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 }
 
 /* Nav link for the section currently on screen */
-.nav-links a:not(.btn).active{color:var(--pine-900)}
+.nav-links a:not(.btn).active{color:var(--plum-900)}
 .nav-links a:not(.btn).active::after{transform:scaleX(1)}
 
 /* Hero ledger: rows start dim, then "reconcile" one by one (JS adds
@@ -736,7 +736,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
   list-style:none;cursor:pointer;
   display:flex;align-items:center;justify-content:space-between;gap:1.25rem;
   padding:1.3rem 1.5rem;
-  font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:1.13rem;color:var(--pine-900);
+  font-family:'Fraunces',Georgia,serif;font-weight:500;font-size:1.13rem;color:var(--plum-900);
 }
 .faq-item summary::-webkit-details-marker{display:none}
 .faq-chevron{
@@ -748,7 +748,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .faq-chevron svg{width:15px;height:15px}
 .faq-item[open] .faq-chevron{
   transform:rotate(45deg);
-  background:var(--pine-900);color:var(--gold-500);border-color:var(--pine-900);
+  background:var(--plum-900);color:var(--gold-500);border-color:var(--plum-900);
 }
 .faq-body{padding:0 1.5rem 1.5rem;color:var(--muted);font-size:.97rem;max-width:64ch}
 .faq-body a{color:var(--gold-600);font-weight:600}
@@ -758,14 +758,14 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
   position:fixed;right:1.4rem;bottom:1.4rem;z-index:90;
   width:50px;height:50px;border-radius:50%;
   border:1px solid rgba(234,217,180,.4);
-  background:var(--pine-900);color:var(--gold-500);
+  background:var(--plum-900);color:var(--gold-500);
   display:grid;place-items:center;cursor:pointer;
   box-shadow:var(--shadow-lift);
   opacity:0;transform:translateY(14px);pointer-events:none;
   transition:opacity .3s var(--ease), transform .3s var(--ease), background .2s var(--ease);
 }
 .to-top.show{opacity:1;transform:none;pointer-events:auto}
-.to-top:hover{background:var(--pine-800)}
+.to-top:hover{background:var(--plum-800)}
 .to-top svg{width:20px;height:20px}
 
 /* "Copy email" chip beside the address */
@@ -778,8 +778,8 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
   border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;
   transition:border-color .2s var(--ease), color .2s var(--ease), background .2s var(--ease);
 }
-.copy-btn:hover{border-color:var(--gold-500);color:var(--pine-900)}
-.copy-btn.copied{background:var(--pine-900);color:var(--gold-200);border-color:var(--pine-900)}
+.copy-btn:hover{border-color:var(--gold-500);color:var(--plum-900)}
+.copy-btn.copied{background:var(--plum-900);color:var(--gold-200);border-color:var(--plum-900)}
 .copy-btn svg{width:15px;height:15px}
 
 /* ============================================================
@@ -1474,7 +1474,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
   <div class="wrap">
     <div class="footer-top">
       <a class="brand" href="#top" aria-label="Back to top">
-        <div class="brand-mark" aria-hidden="true" style="background:var(--gold-500);color:var(--pine-950)">IB</div>
+        <div class="brand-mark" aria-hidden="true" style="background:var(--gold-500);color:var(--plum-950)">IB</div>
         <span class="brand-text">
           <span class="brand-name">Integrity</span>
           <span class="brand-tag">Bookkeeping Service</span>

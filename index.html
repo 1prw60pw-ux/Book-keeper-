@@ -157,7 +157,7 @@
 </script>
 
 <!-- Favicon: the ledger-book logo drawn in code (matches logo.svg) -->
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23372359'/%3E%3Cg fill='none' stroke='%23c89a55' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='17' y='11' width='30' height='42' rx='5' stroke-width='3'/%3E%3Cpath d='M35.5 11v10.5l4-3.5 4 3.5V11' stroke-width='2.6'/%3E%3Cpath d='M24.5 34.5l6.5 6.5 13-14' stroke-width='3.6'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%237c3aed'/%3E%3Cg fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='17' y='11' width='30' height='42' rx='5' stroke-width='3'/%3E%3Cpath d='M35.5 11v10.5l4-3.5 4 3.5V11' stroke-width='2.6'/%3E%3Cpath d='M24.5 34.5l6.5 6.5 13-14' stroke-width='3.6'/%3E%3C/g%3E%3C/svg%3E">
 
 <!-- Fonts: Fraunces (headlines) + Inter (body). Loaded from Google Fonts. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -263,10 +263,9 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .brand{display:inline-flex;align-items:center;gap:.8rem;text-decoration:none}
 .brand-mark{
   width:44px;height:44px;flex:none;border-radius:12px;
-  background:var(--plum-900);
+  background:#7c3aed;   /* bright purple logo tile */
   display:grid;place-items:center;
-  font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;color:var(--gold-500);
-  letter-spacing:.02em;
+  color:#fff;
 }
 .brand-text{line-height:1.2}
 .brand-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--plum-900);display:block}
@@ -1377,7 +1376,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
   <div class="wrap">
     <div class="footer-top">
       <a class="brand" href="#top" aria-label="Back to top">
-        <div class="brand-mark" aria-hidden="true" style="background:var(--gold-500);color:var(--plum-950)">
+        <div class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 64 64" width="28" height="28" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="17" y="11" width="30" height="42" rx="5" stroke-width="3.4"/><path d="M35.5 11v10.5l4-3.5 4 3.5V11" stroke-width="3"/><path d="M24.5 34.5l6.5 6.5 13-14" stroke-width="4"/></svg>
         </div>
         <span class="brand-text">

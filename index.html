@@ -15,7 +15,6 @@
        • Value proposition .......... search for  VALUE PROPOSITION SECTION
        • About you .................. search for  ABOUT SECTION
        • Services ................... search for  SERVICES SECTION
-       • Why choose me .............. search for  WHY SECTION
        • How it works ............... search for  PROCESS SECTION
        • Testimonials ............... search for  TESTIMONIALS SECTION
        • Contact form ............... search for  CONTACT SECTION
@@ -500,28 +499,6 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 @media (max-width:600px){.services-grid{grid-template-columns:1fr}}
 
 /* ============================================================
-   WHY CHOOSE ME (dark panel)
-   ============================================================ */
-.why{background:linear-gradient(170deg,var(--plum-900),var(--plum-950));color:var(--cream)}
-.why .section-title{color:var(--cream)}
-.why .section-intro{color:var(--gold-200)}
-.why-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:3.25rem;
-}
-.why-card{
-  border:1px solid rgba(253,230,138,.22);border-radius:var(--radius);
-  padding:1.8rem 1.5rem;
-  background:rgba(255,253,255,.03);
-  transition:background .22s var(--ease), transform .22s var(--ease), border-color .22s var(--ease);
-}
-.why-card:hover{background:rgba(255,253,255,.07);transform:translateY(-4px);border-color:var(--gold-500)}
-.why-card svg{width:30px;height:30px;color:var(--gold-500);margin-bottom:1.1rem}
-.why-card h3{color:var(--cream);font-size:1.15rem;margin-bottom:.55rem}
-.why-card p{font-size:.92rem;color:var(--gold-200);line-height:1.65}
-@media (max-width:960px){.why-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:560px){.why-grid{grid-template-columns:1fr}}
-
-/* ============================================================
    HOW IT WORKS
    ============================================================ */
 .steps{
@@ -791,7 +768,6 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
       <ul class="nav-links" id="nav-menu">
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#why">Why Me</a></li>
         <li><a href="#process">How It Works</a></li>
         <li><a href="#testimonials">Kind Words</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -1120,54 +1096,6 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 </section>
 
 <!-- ============================================================
-     WHY SECTION — the four promises (dark green panel)
-     ============================================================ -->
-<section class="why on-dark" id="why" aria-labelledby="why-title">
-  <div class="wrap">
-    <div class="reveal">
-      <p class="eyebrow">Why clients stay</p>
-      <h2 class="section-title" id="why-title">Four things you can count on. Literally.</h2>
-      <p class="section-intro">There are plenty of bookkeepers. Here's what working
-      with this one actually feels like.</p>
-    </div>
-
-    <div class="why-grid">
-      <div class="why-card reveal">
-        <!-- target icon -->
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg>
-        <h3>Accuracy, obsessively</h3>
-        <p>Reconciled to the penny, every time. If something is off by seventeen
-        cents, I will find out why. Your books will hold up to any scrutiny.</p>
-      </div>
-
-      <div class="why-card reveal d1">
-        <!-- speech bubble icon -->
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.4 7.5L3 21l2-5.6A8.5 8.5 0 1 1 21 11.5z"/><path d="M8.5 10.5h7M8.5 13.5h4.5"/></svg>
-        <h3>Actually reachable</h3>
-        <p>Questions get answered by me — not a ticket queue. When something's on
-        your mind about your money, you'll never be left wondering.</p>
-      </div>
-
-      <div class="why-card reveal d2">
-        <!-- teacup icon: the "we go at your pace" promise -->
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h13v5.5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9z"/><path d="M17 10h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3.5c-.8 1-.8 2 0 3M12 3.5c-.8 1-.8 2 0 3"/></svg>
-        <h3>Never rushed, ever</h3>
-        <p>We go at your pace. I'll explain anything as many times as you need,
-        and I'll always do what's best for you — not what's quickest for me.</p>
-      </div>
-
-      <div class="why-card reveal d3">
-        <!-- feather icon: lightness / peace of mind -->
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 4c-6 0-11 3-13 9-1 3-1.5 5.5-1.5 7.5C7.5 20.5 10 20 13 19c6-2 9-7 7-15z"/><path d="M5.5 20.5C9 14 13 10 17.5 7"/></svg>
-        <h3>Peace of mind</h3>
-        <p>Sleep-at-night books: current, clean, and tax-ready. You focus on
-        running the business — the financial worry moves off your desk onto mine.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
      PROCESS SECTION — how it works in 3 steps
      ============================================================ -->
 <section id="process" aria-labelledby="process-title">
@@ -1483,7 +1411,6 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
       <ul class="footer-links">
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#why">Why Me</a></li>
         <li><a href="#process">How It Works</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -1610,7 +1537,7 @@ document.getElementById('contact-form').addEventListener('submit', (e) => {
 document.getElementById('year').textContent = new Date().getFullYear();
 
 /* 6 — Scrollspy: underline the nav link for the section in view */
-const spyTargets = ['about', 'services', 'why', 'process', 'testimonials', 'faq', 'contact']
+const spyTargets = ['about', 'services', 'process', 'testimonials', 'faq', 'contact']
   .map((id) => document.getElementById(id))
   .filter(Boolean);
 const navAnchors = document.querySelectorAll('.nav-links a:not(.btn)');

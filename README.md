@@ -106,9 +106,9 @@ Vercel's domain setup (option A, step 5) is the smoothest.
 4. **Real details on the page** — filling in the `[EDIT:]` placeholders
    (years of experience, book titles, real testimonials) directly improves
    how trustworthy the page looks to both people and Google.
-5. **A few good links** — a listing in the local chamber of commerce,
-   QuickBooks ProAdvisor directory (if certified), and Patricia's author
-   pages linking to the site all build authority.
+5. **A few good links** — a listing in the local chamber of commerce and
+   the QuickBooks ProAdvisor directory (if certified) linking to the site
+   all build authority.
 
 ## Placeholders still waiting for your real details
 
@@ -116,7 +116,6 @@ Search `index.html` for `[EDIT:` to find them all. The full list:
 
 | Where | What's needed |
 |---|---|
-| About — "Off the clock" cards | Your book title(s) under "Published author" |
 | About — facts list | Your years of experience |
 | About — facts list | A credential or specialty (e.g. QuickBooks certification) |
 | Testimonials (×3) | Real client quotes, names, and business types — the three quotes there now are **clearly marked samples** |

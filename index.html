@@ -460,11 +460,12 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .hobby-title{display:block;font-weight:600;font-size:.88rem;line-height:1.35}
 .hobby-sub{display:block;font-size:.78rem;color:var(--muted);line-height:1.4}
 
-/* The dog video, tucked under "The bottom line" */
-.about-video{margin-top:1.9rem;max-width:360px}
-.about-video video{
+/* The dog video + photo pair, tucked under "The bottom line" */
+.about-video{margin-top:1.9rem;max-width:560px}
+.pup-row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.about-video video,.about-video img{
   display:block;width:100%;height:auto;
-  border-radius:20px;box-shadow:var(--shadow-soft);
+  border-radius:16px;box-shadow:var(--shadow-soft);
   border:1px solid var(--line);
 }
 .about-video figcaption{
@@ -922,11 +923,16 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
         reducing your tax liability.</p>
       </div>
 
-      <!-- A little personality: the dog video, right under the bottom
-           line. To swap it, replace the file dog-video.mp4 in this folder. -->
+      <!-- A little personality: the dog video and photo, right under the
+           bottom line. To swap them, replace dog-video.mp4 / dog-photo.jpg
+           in this folder. -->
       <figure class="about-video reveal">
-        <video src="dog-video.mp4" autoplay muted loop playsinline preload="auto"
-               aria-label="A dog happily licking Patricia's face"></video>
+        <div class="pup-row">
+          <video src="dog-video.mp4" autoplay muted loop playsinline preload="auto"
+                 aria-label="A dog happily licking Patricia's face"></video>
+          <img src="dog-photo.jpg" width="960" height="720" loading="lazy"
+               alt="Patricia's white puppy sprawled across the back seat, chin resting on the armrest">
+        </div>
         <figcaption>Client satisfaction, off the clock.</figcaption>
       </figure>
 

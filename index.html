@@ -17,6 +17,7 @@
        • Services ................... search for  SERVICES SECTION
        • How it works ............... search for  PROCESS SECTION
        • Testimonials ............... search for  TESTIMONIALS SECTION
+       • Booking calendar ........... search for  CALENDLY_URL  (paste your link there)
        • Contact form ............... search for  CONTACT SECTION
        • Footer ..................... search for  FOOTER SECTION
        • Colors ..................... search for  COLOR PALETTE
@@ -557,6 +558,17 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .quote-who .name{font-weight:600;font-size:.93rem;line-height:1.3}
 .quote-who .role{font-size:.82rem;color:var(--muted)}
 @media (max-width:960px){.quote-grid{grid-template-columns:1fr;max-width:560px}}
+
+/* ============================================================
+   BOOKING (Calendly)
+   ============================================================ */
+.booking{background:var(--paper);border-block:1px solid var(--line)}
+.calendly-shell{
+  margin-top:2.5rem;
+  background:#fff;border:1px solid var(--line);border-radius:22px;
+  box-shadow:var(--shadow-soft);overflow:hidden;
+}
+.calendly-shell .calendly-inline-widget{min-width:320px;height:700px}
 
 /* ============================================================
    CONTACT
@@ -1292,6 +1304,26 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 </section>
 
 <!-- ============================================================
+     BOOKING SECTION (CALENDLY) — a live scheduling calendar.
+     HIDDEN until you paste Patricia's Calendly link into the
+     CALENDLY_URL line near the bottom of this file (search for
+     CALENDLY_URL). Once that's filled in, this section appears
+     automatically and visitors can book a consultation directly.
+     ============================================================ -->
+<section class="booking" id="book" hidden aria-labelledby="book-title">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;max-width:720px;margin-inline:auto">
+      <p class="eyebrow" style="justify-content:center">Schedule instantly</p>
+      <h2 class="section-title" id="book-title" style="margin-inline:auto">Book your free consultation</h2>
+      <p class="section-intro" style="margin-inline:auto">Pick a day and time that
+      works for you — it goes straight onto Patricia's calendar. No
+      back-and-forth emails, no phone tag.</p>
+    </div>
+    <div class="calendly-shell reveal d1" id="calendly-shell"></div>
+  </div>
+</section>
+
+<!-- ============================================================
      CONTACT SECTION — the form opens the visitor's email app
      with a message pre-addressed to patsbookkeeping25@gmail.com
      ============================================================ -->
@@ -1442,7 +1474,8 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
    4. Contact form → opens visitor's email app (mailto)
    5. Auto-updating copyright year
    6. Nav highlights the section you're reading (scrollspy)
-   7. Copy-email button
+   7. Calendly booking calendar (paste your link at CALENDLY_URL)
+   8. Copy-email button
    ============================================================ */
 
 /* 1 — Mobile menu */
@@ -1554,7 +1587,43 @@ if ('IntersectionObserver' in window) {
   spyTargets.forEach((sec) => spy.observe(sec));
 }
 
-/* 7 — Copy-email button */
+/* 7 — Calendly booking calendar.
+       ======== CALENDLY_URL — PASTE PATRICIA'S LINK HERE ========
+       1. Create a free account at calendly.com and set up an event
+          (e.g. "Free Consultation — 30 minutes").
+       2. Copy the event link Calendly gives you, e.g.
+          https://calendly.com/patricia-woods/30min
+       3. Paste it between the quotes below and save this file.
+       The "Book your free consultation" section then appears on the
+       site automatically, showing a live calendar in brand colors. */
+const CALENDLY_URL = '';
+
+if (CALENDLY_URL) {
+  const bookSection = document.getElementById('book');
+  const shell = document.getElementById('calendly-shell');
+  bookSection.hidden = false;
+  const widget = document.createElement('div');
+  widget.className = 'calendly-inline-widget';
+  const sep = CALENDLY_URL.includes('?') ? '&' : '?';
+  widget.setAttribute('data-url',
+    CALENDLY_URL + sep + 'hide_gdpr_banner=1&background_color=ffffff&text_color=2b2144&primary_color=7c3aed');
+  shell.appendChild(widget);
+  const calScript = document.createElement('script');
+  calScript.src = 'https://assets.calendly.com/assets/external/widget.js';
+  calScript.async = true;
+  document.body.appendChild(calScript);
+
+  /* let visitors jump to the calendar from the contact section */
+  const expectList = document.querySelector('.contact-expect');
+  if (expectList) {
+    const li = document.createElement('li');
+    li.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"/></svg>' +
+      '<span>In a hurry? <a href="#book" style="color:var(--gold-600);font-weight:600">Book a time on the calendar</a> right now</span>';
+    expectList.appendChild(li);
+  }
+}
+
+/* 8 — Copy-email button */
 const copyBtn = document.getElementById('copy-email');
 copyBtn.addEventListener('click', async () => {
   try {

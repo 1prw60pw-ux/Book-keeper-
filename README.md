@@ -80,6 +80,24 @@ the top of the styles control the whole site.
 `woodsintegrityservice.com` can be pointed at options B and C too, but
 Vercel's domain setup (option A, step 5) is the smoothest.
 
+## Online booking (Calendly)
+
+The site has a built-in "Book your free consultation" section with a live
+scheduling calendar. It stays hidden until you connect it — takes about
+five minutes:
+
+1. Create a free account at https://calendly.com
+2. Set up one event type — e.g. **"Free Consultation — 30 minutes"** —
+   and set your available days/hours in Calendly.
+3. Copy the event link Calendly gives you (it looks like
+   `https://calendly.com/your-name/30min`).
+4. Open `index.html`, search for `CALENDLY_URL`, and paste the link
+   between the quotes: `const CALENDLY_URL = 'https://calendly.com/your-name/30min';`
+5. Save. The booking section appears automatically (styled to match the
+   site), and a "book a time on the calendar" link is added to the
+   contact section. Bookings land straight on your calendar and Calendly
+   emails both sides a confirmation.
+
 ## SEO — what's built in, and the 30 minutes that matter most
 
 **Already built into the site** (nothing to do):

@@ -80,6 +80,26 @@ the top of the styles control the whole site.
 `patsbooks.com` can be pointed at options B and C too, but
 Vercel's domain setup (option A, step 5) is the smoothest.
 
+## How the contact form reaches your inbox
+
+Messages from the website's contact form are delivered straight to
+**patsbookkeeping25@gmail.com** by a free service called FormSubmit —
+no email app needed on the visitor's side.
+
+**One-time activation (do this once):**
+1. Go to the live site, fill out the contact form yourself, and hit
+   "Send my message."
+2. Check patsbookkeeping25@gmail.com for an email from **FormSubmit**
+   with an "Activate" button/link (look in Spam/Promotions if it's not
+   in the inbox), and click it.
+3. Done — every form submission now arrives as a tidy email, with the
+   visitor's address set as reply-to so you can just hit Reply.
+
+Good to know: submissions include a hidden spam trap, and if the
+delivery service is ever unreachable, the form automatically falls back
+to opening the visitor's own email app so no lead is lost. If form
+emails ever land in Spam, mark one as "Not spam" and Gmail learns.
+
 ## Online booking (Calendly)
 
 The site has a built-in "Book your free consultation" section with a live

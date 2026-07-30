@@ -461,8 +461,8 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .hobby-title{display:block;font-weight:600;font-size:.88rem;line-height:1.35}
 .hobby-sub{display:block;font-size:.78rem;color:var(--muted);line-height:1.4}
 
-/* The dog video at the end of the About section */
-.about-video{margin-top:2.25rem;max-width:360px}
+/* The dog video, tucked under "The bottom line" */
+.about-video{margin-top:1.9rem;max-width:360px}
 .about-video video{
   display:block;width:100%;height:auto;
   border-radius:20px;box-shadow:var(--shadow-soft);
@@ -958,6 +958,14 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
         reducing your tax liability.</p>
       </div>
 
+      <!-- A little personality: the dog video, right under the bottom
+           line. To swap it, replace the file dog-video.mp4 in this folder. -->
+      <figure class="about-video reveal">
+        <video src="dog-video.mp4" autoplay muted loop playsinline preload="auto"
+               aria-label="A dog happily licking Patricia's face"></video>
+        <figcaption>Client satisfaction, off the clock.</figcaption>
+      </figure>
+
       <!-- Strong call-to-action with the new-client offer -->
       <div class="about-cta">
         <a class="btn btn-primary js-book-cta" href="#contact">Get a free evaluation of your books
@@ -1021,14 +1029,6 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
           <span>Your data handled with strict confidentiality</span>
         </li>
       </ul>
-
-      <!-- A little personality: the dog video. To swap it, replace the
-           file dog-video.mp4 in this folder. -->
-      <figure class="about-video reveal">
-        <video src="dog-video.mp4" autoplay muted loop playsinline preload="auto"
-               aria-label="A dog happily licking Patricia's face"></video>
-        <figcaption>Client satisfaction, off the clock.</figcaption>
-      </figure>
     </div>
   </div>
 </section>

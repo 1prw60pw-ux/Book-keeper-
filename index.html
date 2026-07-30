@@ -784,7 +784,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
         <li><a href="#testimonials">Kind Words</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li>
-          <a class="btn btn-gold" href="#contact">Get Started
+          <a class="btn btn-gold js-book-cta" href="#contact">Get Started
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </li>
@@ -811,7 +811,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
       no judgment about how far behind you are.</p>
 
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="#contact">Book a free consultation
+        <a class="btn btn-primary js-book-cta" href="#contact">Book a free consultation
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
         <a class="btn btn-ghost" href="#services">See what I handle</a>
@@ -892,7 +892,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
     </div>
 
     <div class="value-cta reveal">
-      <a class="btn btn-primary" href="#contact">Book a free consultation
+      <a class="btn btn-primary js-book-cta" href="#contact">Book a free consultation
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
       <span class="value-note">Free evaluation of your books &middot; new-client pricing &middot; no judgment about where they stand</span>
@@ -948,7 +948,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 
       <!-- Strong call-to-action with the new-client offer -->
       <div class="about-cta">
-        <a class="btn btn-primary" href="#contact">Get a free evaluation of your books
+        <a class="btn btn-primary js-book-cta" href="#contact">Get a free evaluation of your books
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
         <span class="value-note">Plus new-client pricing when you're ready to start</span>
@@ -1612,6 +1612,10 @@ if (CALENDLY_URL) {
   calScript.src = 'https://assets.calendly.com/assets/external/widget.js';
   calScript.async = true;
   document.body.appendChild(calScript);
+
+  /* point the booking-intent buttons at the live calendar
+     (they fall back to the contact form if no Calendly link is set) */
+  document.querySelectorAll('.js-book-cta').forEach((a) => { a.href = '#book'; });
 
   /* let visitors jump to the calendar from the contact section */
   const expectList = document.querySelector('.contact-expect');

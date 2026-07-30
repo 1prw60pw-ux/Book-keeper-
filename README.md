@@ -1,7 +1,7 @@
 # Integrity Bookkeeping Service — Website
 
 Business: **Integrity Bookkeeping Service** (Patricia Woods) ·
-Domain: **woodsintegrityservice.com**
+Domain: **patsbooks.com**
 
 The entire website is **one file: `index.html`**. No installs, no builds, no
 subscriptions. Double-click it and it opens in your browser, working exactly
@@ -56,10 +56,10 @@ the top of the styles control the whole site.
    30 seconds, and it automatically redeploys every time the site files
    change on GitHub.
 5. **Connect the real domain:** go to **Project → Settings → Domains**,
-   type `woodsintegrityservice.com`, and follow the two DNS steps Vercel
+   type `patsbooks.com`, and follow the two DNS steps Vercel
    shows you (you set those at the company where the domain was bought).
    Vercel handles the HTTPS certificate automatically, and it's smart to
-   let it redirect `www.woodsintegrityservice.com` to the main domain
+   let it redirect `www.patsbooks.com` to the main domain
    (it offers this during setup).
 
    (The `vercel.json` file in this folder is already set up — it adds
@@ -77,7 +77,7 @@ the top of the styles control the whole site.
    main branch and the `/ (root)` folder, and save.
 3. After a minute your site is live at `https://<your-username>.github.io/<repo-name>/`.
 
-`woodsintegrityservice.com` can be pointed at options B and C too, but
+`patsbooks.com` can be pointed at options B and C too, but
 Vercel's domain setup (option A, step 5) is the smoothest.
 
 ## Online booking (Calendly)
@@ -117,7 +117,7 @@ five minutes:
    This is what puts the business on Google Maps and in the local results box.
 2. **Google Search Console** — at https://search.google.com/search-console,
    add the domain, verify it (Vercel makes this a one-click DNS record), and
-   submit `https://woodsintegrityservice.com/sitemap.xml`. This gets the site
+   submit `https://patsbooks.com/sitemap.xml`. This gets the site
    indexed fast and shows what people searched to find it.
 3. **Reviews** — after each happy client, ask for a Google review on the
    Business Profile. Five genuine reviews outrank a thousand keywords.

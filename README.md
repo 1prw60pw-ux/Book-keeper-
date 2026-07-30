@@ -134,8 +134,11 @@ Search `index.html` for `[EDIT:` to find them all. The full list:
 
 | Where | What's needed |
 |---|---|
-| Testimonials (×3) | Real client quotes, names, and business types — the three quotes there now are **clearly marked samples** |
 | FAQ — "meet in person" | Your local meeting preference |
+
+(The sample testimonials section has been removed from the site — when you
+have real client reviews, ask to have the "Kind Words" section added back
+with the genuine quotes.)
 
 Everything else is finished copy you can keep, trim, or rewrite in your own
 voice.

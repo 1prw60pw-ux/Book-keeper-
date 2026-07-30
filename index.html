@@ -16,7 +16,6 @@
        • About you .................. search for  ABOUT SECTION
        • Services ................... search for  SERVICES SECTION
        • How it works ............... search for  PROCESS SECTION
-       • Testimonials ............... search for  TESTIMONIALS SECTION
        • Booking calendar ........... search for  CALENDLY_URL  (paste your link there)
        • Contact form ............... search for  CONTACT SECTION
        • Footer ..................... search for  FOOTER SECTION
@@ -538,40 +537,6 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 @media (max-width:840px){.steps{grid-template-columns:1fr}}
 
 /* ============================================================
-   TESTIMONIALS
-   ============================================================ */
-.testimonials{background:var(--paper);border-block:1px solid var(--line)}
-.sample-note{
-  display:inline-flex;align-items:center;gap:.5rem;
-  margin-top:1.1rem;padding:.45rem .9rem;border-radius:999px;
-  background:var(--gold-200);color:var(--plum-950);
-  font-size:.8rem;font-weight:600;
-}
-.sample-note svg{width:15px;height:15px}
-.quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.75rem}
-.quote-card{
-  background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);
-  padding:2rem 1.7rem;display:flex;flex-direction:column;
-  transition:transform .22s var(--ease), box-shadow .22s var(--ease);
-}
-.quote-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-soft)}
-.quote-mark{width:34px;height:34px;color:var(--gold-500);margin-bottom:1rem}
-.quote-card blockquote{
-  font-family:'Fraunces',serif;font-size:1.08rem;line-height:1.6;color:var(--ink);
-  flex:1;
-}
-.quote-who{display:flex;align-items:center;gap:.85rem;margin-top:1.6rem}
-.quote-avatar{
-  width:42px;height:42px;flex:none;border-radius:50%;
-  background:var(--plum-900);color:var(--gold-500);
-  display:grid;place-items:center;
-  font-family:'Fraunces',serif;font-size:.95rem;
-}
-.quote-who .name{font-weight:600;font-size:.93rem;line-height:1.3}
-.quote-who .role{font-size:.82rem;color:var(--muted)}
-@media (max-width:960px){.quote-grid{grid-template-columns:1fr;max-width:560px}}
-
-/* ============================================================
    BOOKING (Calendly)
    ============================================================ */
 .booking{background:var(--paper);border-block:1px solid var(--line)}
@@ -793,7 +758,6 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#process">How It Works</a></li>
-        <li><a href="#testimonials">Kind Words</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li>
           <a class="btn btn-gold js-book-cta" href="#contact">Get Started
@@ -1180,68 +1144,6 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 </section>
 
 <!-- ============================================================
-     TESTIMONIALS SECTION
-     *** THESE ARE SAMPLE PLACEHOLDER QUOTES — replace each quote
-     and name with real client words before or after launch. ***
-     ============================================================ -->
-<section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
-  <div class="wrap">
-    <div class="reveal">
-      <p class="eyebrow">Kind words</p>
-      <h2 class="section-title" id="testimonials-title">What clients say about working with Patricia</h2>
-      <p class="sample-note">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.01"/></svg>
-        Sample testimonials — replace with real client quotes
-      </p>
-    </div>
-
-    <div class="quote-grid">
-      <figure class="quote-card reveal">
-        <svg class="quote-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 5C4 6.8 2.5 9.4 2.5 12.6c0 3.6 2.1 6.4 5.1 6.4 2.3 0 4-1.7 4-3.9 0-2.1-1.5-3.7-3.6-3.7-.4 0-.9.1-1.1.2.3-2 1.7-3.9 3.6-5L6.5 5zm11 0C15 6.8 13.5 9.4 13.5 12.6c0 3.6 2.1 6.4 5.1 6.4 2.3 0 4-1.7 4-3.9 0-2.1-1.5-3.7-3.6-3.7-.4 0-.9.1-1.1.2.3-2 1.7-3.9 3.6-5L17.5 5z"/></svg>
-        <blockquote>I hadn't opened my books in over a year and I was too embarrassed
-        to ask for help. Patricia never made me feel bad for a second — she just
-        quietly fixed everything. I finally sleep at night.</blockquote>
-        <figcaption class="quote-who">
-          <span class="quote-avatar" aria-hidden="true">[E]</span>
-          <span>
-            <span class="name">[EDIT: real client name]</span><br>
-            <span class="role">[EDIT: business type, e.g. "Contractor"]</span>
-          </span>
-        </figcaption>
-      </figure>
-
-      <figure class="quote-card reveal d1">
-        <svg class="quote-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 5C4 6.8 2.5 9.4 2.5 12.6c0 3.6 2.1 6.4 5.1 6.4 2.3 0 4-1.7 4-3.9 0-2.1-1.5-3.7-3.6-3.7-.4 0-.9.1-1.1.2.3-2 1.7-3.9 3.6-5L6.5 5zm11 0C15 6.8 13.5 9.4 13.5 12.6c0 3.6 2.1 6.4 5.1 6.4 2.3 0 4-1.7 4-3.9 0-2.1-1.5-3.7-3.6-3.7-.4 0-.9.1-1.1.2.3-2 1.7-3.9 3.6-5L17.5 5z"/></svg>
-        <blockquote>Tax season used to mean panic and a shoebox of receipts. This
-        year my CPA said it was the cleanest set of books he'd seen all season.
-        That was all Patricia.</blockquote>
-        <figcaption class="quote-who">
-          <span class="quote-avatar" aria-hidden="true">[E]</span>
-          <span>
-            <span class="name">[EDIT: real client name]</span><br>
-            <span class="role">[EDIT: business type, e.g. "Boutique owner"]</span>
-          </span>
-        </figcaption>
-      </figure>
-
-      <figure class="quote-card reveal d2">
-        <svg class="quote-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 5C4 6.8 2.5 9.4 2.5 12.6c0 3.6 2.1 6.4 5.1 6.4 2.3 0 4-1.7 4-3.9 0-2.1-1.5-3.7-3.6-3.7-.4 0-.9.1-1.1.2.3-2 1.7-3.9 3.6-5L6.5 5zm11 0C15 6.8 13.5 9.4 13.5 12.6c0 3.6 2.1 6.4 5.1 6.4 2.3 0 4-1.7 4-3.9 0-2.1-1.5-3.7-3.6-3.7-.4 0-.9.1-1.1.2.3-2 1.7-3.9 3.6-5L17.5 5z"/></svg>
-        <blockquote>What I appreciate most is that she explains things until I
-        actually understand them. I know exactly where my business stands every
-        single month. I've never had that before.</blockquote>
-        <figcaption class="quote-who">
-          <span class="quote-avatar" aria-hidden="true">[E]</span>
-          <span>
-            <span class="name">[EDIT: real client name]</span><br>
-            <span class="role">[EDIT: business type, e.g. "Café owner"]</span>
-          </span>
-        </figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
      FAQ SECTION — the questions every new client asks.
      To add a question, copy one whole <details>...</details>
      block and edit the text inside it.
@@ -1602,7 +1504,7 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 document.getElementById('year').textContent = new Date().getFullYear();
 
 /* 6 — Scrollspy: underline the nav link for the section in view */
-const spyTargets = ['about', 'services', 'process', 'testimonials', 'faq', 'contact']
+const spyTargets = ['about', 'services', 'process', 'faq', 'contact']
   .map((id) => document.getElementById(id))
   .filter(Boolean);
 const navAnchors = document.querySelectorAll('.nav-links a:not(.btn)');

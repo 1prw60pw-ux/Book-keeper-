@@ -134,8 +134,6 @@ Search `index.html` for `[EDIT:` to find them all. The full list:
 
 | Where | What's needed |
 |---|---|
-| About — facts list | Your years of experience |
-| About — facts list | A credential or specialty (e.g. QuickBooks certification) |
 | Testimonials (×3) | Real client quotes, names, and business types — the three quotes there now are **clearly marked samples** |
 | FAQ — "meet in person" | Your local meeting preference |
 

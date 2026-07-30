@@ -461,6 +461,18 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .hobby-title{display:block;font-weight:600;font-size:.88rem;line-height:1.35}
 .hobby-sub{display:block;font-size:.78rem;color:var(--muted);line-height:1.4}
 
+/* The dog video at the end of the About section */
+.about-video{margin-top:2.25rem;max-width:360px}
+.about-video video{
+  display:block;width:100%;height:auto;
+  border-radius:20px;box-shadow:var(--shadow-soft);
+  border:1px solid var(--line);
+}
+.about-video figcaption{
+  margin-top:.7rem;font-family:'Fraunces',Georgia,serif;font-style:italic;
+  font-size:.95rem;color:var(--gold-600);
+}
+
 @media (max-width:840px){
   .about-grid{grid-template-columns:1fr}
   .about-photo{max-width:340px}
@@ -1007,6 +1019,14 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
           <span>Your data handled with strict confidentiality</span>
         </li>
       </ul>
+
+      <!-- A little personality: the dog video. To swap it, replace the
+           file dog-video.mp4 in this folder. -->
+      <figure class="about-video reveal">
+        <video src="dog-video.mp4" autoplay muted loop playsinline preload="auto"
+               aria-label="A dog happily licking Patricia's face"></video>
+        <figcaption>Client satisfaction, off the clock.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -1566,6 +1586,14 @@ document.getElementById('contact-form').addEventListener('submit', (e) => {
   sendBtn.innerHTML = 'Opening your email app&hellip;';
   setTimeout(() => { sendBtn.innerHTML = original; }, 4000);
 });
+
+/* 4b — Respect "reduce motion": don't autoplay the About video */
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('.about-video video').forEach((v) => {
+    v.removeAttribute('autoplay');
+    v.pause();
+  });
+}
 
 /* 5 — Copyright year stays current automatically */
 document.getElementById('year').textContent = new Date().getFullYear();

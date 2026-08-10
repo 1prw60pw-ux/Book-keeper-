@@ -460,19 +460,6 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .hobby-title{display:block;font-weight:600;font-size:.88rem;line-height:1.35}
 .hobby-sub{display:block;font-size:.78rem;color:var(--muted);line-height:1.4}
 
-/* The family-and-dogs gallery, tucked under "The bottom line" */
-.about-video{margin-top:1.9rem;max-width:560px}
-.pup-row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-.about-video video,.about-video img{
-  display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;
-  border-radius:16px;box-shadow:var(--shadow-soft);
-  border:1px solid var(--line);
-}
-.about-video figcaption{
-  margin-top:.7rem;font-family:'Fraunces',Georgia,serif;font-style:italic;
-  font-size:.95rem;color:var(--gold-600);
-}
-
 @media (max-width:840px){
   .about-grid{grid-template-columns:1fr}
   .about-photo{max-width:340px}
@@ -922,23 +909,6 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
         the bookkeeping. Let's get you started on saving time and money and
         reducing your tax liability.</p>
       </div>
-
-      <!-- A little personality: the family-and-dogs gallery, right under
-           the bottom line. To swap any tile, replace its file
-           (dog-video.mp4, family-photo.jpg, dog2-photo.jpg, dog-photo.jpg). -->
-      <figure class="about-video reveal">
-        <div class="pup-row">
-          <video src="dog-video.mp4" autoplay muted loop playsinline preload="auto"
-                 aria-label="A dog happily licking Patricia's face"></video>
-          <img src="family-photo.jpg" width="900" height="1200" loading="lazy"
-               alt="Patricia and her family smiling together on a sunny fishing trip">
-          <img src="dog2-photo.jpg" width="900" height="900" loading="lazy"
-               alt="A small fluffy white dog resting in Patricia's arms">
-          <img src="dog-photo.jpg" width="960" height="720" loading="lazy"
-               alt="Patricia's white puppy sprawled across the back seat, chin resting on the armrest">
-        </div>
-        <figcaption>Off the clock: family, fishing trips, and the quality-control department.</figcaption>
-      </figure>
 
       <!-- Strong call-to-action with the new-client offer -->
       <div class="about-cta">
@@ -1536,14 +1506,6 @@ document.getElementById('contact-form').addEventListener('submit', async (e) => 
       `&body=${encodeURIComponent(body)}`;
   }
 });
-
-/* 4b — Respect "reduce motion": don't autoplay the About video */
-if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  document.querySelectorAll('.about-video video').forEach((v) => {
-    v.removeAttribute('autoplay');
-    v.pause();
-  });
-}
 
 /* 5 — Copyright year stays current automatically */
 document.getElementById('year').textContent = new Date().getFullYear();

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://patsbooks.com/sitemap.xml
+Sitemap: https://woodsintegrityservice.com/sitemap.xml

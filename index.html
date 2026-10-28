@@ -418,15 +418,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 /* ============================================================
    ABOUT
    ============================================================ */
-.about-grid{
-  display:grid;grid-template-columns:.9fr 1.1fr;
-  gap:clamp(2.5rem,6vw,5.5rem);align-items:center;
-}
-/* Patricia's photo in the About section (head-and-shoulders crop) */
-.about-photo{
-  display:block;width:100%;max-width:400px;height:auto;
-  border-radius:24px;box-shadow:var(--shadow-lift);
-}
+.about-grid{max-width:720px;margin-inline:auto}
 .about-cta{
   margin-top:1.75rem;display:flex;flex-wrap:wrap;align-items:center;gap:.9rem 1.1rem;
 }
@@ -452,8 +444,6 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 .about-facts svg{width:20px;height:20px;flex:none;color:var(--gold-600);margin-top:.15rem}
 
 @media (max-width:840px){
-  .about-grid{grid-template-columns:1fr}
-  .about-photo{max-width:340px}
   .about-facts{grid-template-columns:1fr}
 }
 
@@ -881,13 +871,6 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
      ============================================================ -->
 <section id="about" aria-labelledby="about-title">
   <div class="wrap about-grid">
-    <div class="reveal">
-      <!-- Patricia's photo (close-up crop). To change it, replace the
-           file patricia-about.jpg in the same folder as this file. -->
-      <img class="about-photo" src="patricia-about.jpg" width="760" height="760" loading="lazy"
-           alt="Patricia Woods smiling in front of a greenery-and-flower wall">
-    </div>
-
     <div class="about-copy reveal d1">
       <p class="eyebrow">Meet Patricia</p>
       <h2 class="section-title" id="about-title">The bookkeeper who actually picks up the phone</h2>

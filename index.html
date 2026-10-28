@@ -98,7 +98,7 @@
       "image": "https://woodsintegrityservice.com/patricia.jpg",
       "jobTitle": "Bookkeeper & Owner",
       "worksFor": { "@id": "https://woodsintegrityservice.com/#business" },
-      "description": "Bookkeeper with 5 years of experience keeping business books, and a creative writer. Born in Dallas and based in Texas, serving business clients everywhere remotely.",
+      "description": "Bookkeeper with 5 years of experience keeping business books. Born in Dallas and based in Texas, serving business clients everywhere remotely.",
       "knowsAbout": ["Bookkeeping", "QuickBooks Online", "Manual ledger bookkeeping", "Payroll", "Business finance"]
     },
     {
@@ -443,25 +443,13 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
   font-size:.85rem;color:var(--muted);
 }
 .about-facts{
-  margin-top:2rem;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;list-style:none;
+  margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;list-style:none;
 }
 .about-facts li{
   display:flex;gap:.7rem;align-items:flex-start;
   font-size:.95rem;color:var(--ink);
 }
 .about-facts svg{width:20px;height:20px;flex:none;color:var(--gold-600);margin-top:.15rem}
-/* "Off the clock" personal cards */
-.hobbies{margin-top:1.25rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.9rem}
-.hobby{
-  display:flex;align-items:center;gap:.75rem;
-  background:var(--paper);border:1px solid var(--line);border-radius:14px;
-  padding:.85rem 1rem;
-  transition:transform .2s var(--ease), border-color .2s var(--ease), box-shadow .2s var(--ease);
-}
-.hobby:hover{transform:translateY(-3px);border-color:var(--gold-500);box-shadow:var(--shadow-soft)}
-.hobby svg{width:24px;height:24px;flex:none;color:var(--gold-600)}
-.hobby-title{display:block;font-weight:600;font-size:.88rem;line-height:1.35}
-.hobby-sub{display:block;font-size:.78rem;color:var(--muted);line-height:1.4}
 
 @media (max-width:840px){
   .about-grid{grid-template-columns:1fr}
@@ -919,18 +907,8 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
         But what my clients tell me they value most isn't the precision — it's the
         patience. I never rush you, I never talk down to you, and I'll explain your
         numbers as many times as it takes until they make sense.</p>
-        <p>When I'm not doing QuickBooks, I'm doing creative writing. Writing
-        and bookkeeping are closer cousins than people think: both reward
-        discipline, structure, and sweating every small detail until the whole
-        thing reads clean. It also means that when I explain your finances, you
-        get plain English, never jargon.</p>
-        <p>The rest of my time belongs to my family — backyard barbecues,
-        fishing trips with my husband, and hanging out with the people I love.
-        I'm family-oriented through and through. Fishing taught me patience.
-        Family taught me loyalty. My clients get the benefit of both.</p>
         <p><strong>The bottom line:</strong> you didn't start your business to do
-        the bookkeeping. Let's get you started on saving time and money and
-        reducing your tax liability.</p>
+        the bookkeeping. Let me take it off your plate so you can focus on running it.</p>
       </div>
 
       <!-- Strong call-to-action with the new-client offer -->
@@ -947,34 +925,6 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
         <cite>&mdash; Patricia Woods, Owner</cite>
       </blockquote>
 
-      <!-- Off the clock: three little personal cards with icons -->
-      <p class="eyebrow" style="margin-top:2.25rem">Off the clock</p>
-      <ul class="hobbies" style="list-style:none">
-        <li class="hobby">
-          <!-- pencil icon -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4.5l5 5L9 20l-5.5 1.5L5 15.5 14.5 4.5z"/><path d="M12.5 6.5l5 5"/></svg>
-          <span>
-            <span class="hobby-title">Creative writer</span>
-            <span class="hobby-sub">Always a story in progress</span>
-          </span>
-        </li>
-        <li class="hobby">
-          <!-- fishing icon -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 12c2.5-3.5 6-5.5 9.5-5.5 2.2 0 3.7 2.5 4.2 5.5-.5 3-2 5.5-4.2 5.5-3.5 0-7-2-9.5-5.5z"/><path d="M7 12l-4-3.5v7L7 12z"/><path d="M16.5 10.75h.01"/></svg>
-          <span>
-            <span class="hobby-title">Weekend angler</span>
-            <span class="hobby-sub">On the water with my husband</span>
-          </span>
-        </li>
-        <li class="hobby">
-          <!-- heart icon -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5S4.5 15.7 4.5 10.4A4.2 4.2 0 0 1 12 7.9a4.2 4.2 0 0 1 7.5 2.5c0 5.3-7.5 10.1-7.5 10.1z"/></svg>
-          <span>
-            <span class="hobby-title">Family first</span>
-            <span class="hobby-sub">Family-oriented, always</span>
-          </span>
-        </li>
-      </ul>
 
       <ul class="about-facts">
         <li>
@@ -983,13 +933,7 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
-          <span>Dallas-born, Texas-based — serving clients anywhere remotely</span>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="15" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
-          <span>Proficient in QuickBooks and traditional manual bookkeeping,
-          including maintaining accurate financial records using handwritten
-          ledger sheets</span>
+          <span>Based in Texas, serving clients anywhere remotely</span>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.4-3 8.4-7 10-4-1.6-7-5.6-7-10V6l7-3z"/><path d="M9 12l2 2 4-4.5"/></svg>
@@ -1419,10 +1363,9 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
-    <p class="footer-blurb">Integrity Bookkeeping Service helps business owners
-    save time and money — monthly bookkeeping and reconciliation, QuickBooks
+    <p class="footer-blurb">Integrity Bookkeeping Service offers monthly bookkeeping and reconciliation, QuickBooks
     setup and management, payroll support, financial reporting, tax-season prep,
-    and catch-up cleanups — from Texas, serving clients everywhere remotely.</p>
+    and catch-up cleanups.</p>
     <div class="footer-bottom">
       <p>&copy; <span id="year">2026</span> Integrity Bookkeeping Service &middot; Patricia Woods. All rights reserved.</p>
       <p><a href="tel:+19453891318">945-389-1318</a> &middot; <a href="mailto:patsbookkeeping25@gmail.com?subject=Bookkeeping%20inquiry%20from%20your%20website">patsbookkeeping25@gmail.com</a></p>

@@ -355,6 +355,19 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
 }
 .hero-trust svg{width:20px;height:20px;flex:none;color:var(--gold-600)}
 
+.hero-contact{
+  display:flex;flex-wrap:wrap;align-items:center;gap:.55rem 1.35rem;margin-top:1.6rem;
+  font-size:.95rem;font-weight:600;
+}
+.hero-contact a{
+  display:inline-flex;align-items:center;gap:.55rem;
+  color:var(--plum-900);text-decoration:none;
+  transition:color .2s var(--ease);
+}
+.hero-contact a:hover{color:var(--gold-600)}
+.hero-contact svg{width:18px;height:18px;flex:none;color:var(--gold-600)}
+.hero-contact-sep{color:var(--line);font-weight:400;user-select:none}
+
 /* Patricia's hero photo with a gold offset frame */
 .hero-visual{position:relative;width:100%;max-width:500px;justify-self:end}
 .hero-visual::before{
@@ -781,6 +794,18 @@ section{padding-block:clamp(4.25rem,9vw,7.5rem)}
         </a>
         <a class="btn btn-ghost" href="#services">See what I handle</a>
       </div>
+
+      <p class="hero-contact" aria-label="Call or email Patricia">
+        <a href="tel:+19453891318">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h3.5l1.8 4.5-2.2 1.7a11 11 0 0 0 5.7 5.7l1.7-2.2L20 15.5V19a1.5 1.5 0 0 1-1.6 1.5A15.5 15.5 0 0 1 3.5 5.6 1.5 1.5 0 0 1 5 4z"/></svg>
+          945-389-1318
+        </a>
+        <span class="hero-contact-sep" aria-hidden="true">&middot;</span>
+        <a href="mailto:patsbookkeeping25@gmail.com?subject=Bookkeeping%20inquiry%20from%20your%20website">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>
+          patsbookkeeping25@gmail.com
+        </a>
+      </p>
 
       <p class="hero-trust">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.4-3 8.4-7 10-4-1.6-7-5.6-7-10V6l7-3z"/><path d="M9 12l2 2 4-4.5"/></svg>
